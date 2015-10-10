@@ -1,0 +1,22 @@
+<paquet
+	prefix="cidse_campaign"
+	categorie="communication"
+	version="1.0.0"
+	etat="dev"
+	compatibilite="[3.0.20;3.0.*]"
+	logo="prive/themes/spip/images/cidse_campaign-64.png"
+	documentation=""
+>
+	<!--
+		Paquet genere le 2015-10-10 12:11:45
+	-->
+
+	<nom>Cidse Campaign</nom>
+
+	<auteur>Rainer Müller</auteur>
+
+	<licence>GNU/GPL</licence>
+
+
+
+</paquet>
