@@ -7,6 +7,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// C
 	'cidse_campaign_titre' => 'Cidse Campaign',
+	
+  // U
+  'upload_video' => 'Upload your video',
 );
 
 ?>

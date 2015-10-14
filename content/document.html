@@ -1,0 +1,31 @@
+<BOUCLE_content(DOCUMENTS){id_document}{tout}>
+<section>
+    <div class="main">
+    [(#REM) Boite à outils]
+    [(#INCLURE{fond=inclure/outils,env})]        
+        [<div class="#EDIT{texte} texte">(#TEXTE)</div>]
+        <B_articles>
+        <br class="nettoyeur"/>
+        <BOUCLE_articles(ARTICLES){id_rubrique}{0,1}>
+            <div class="liste articles">
+            <INCLURE{fond=liste/articles-resume,env,ajax,titre=<:articles_rubrique:>} />
+            </div>
+        </BOUCLE_articles>
+    </div>
+
+    <aside>
+          [(#REM) Gestion du portfolio et des documents ]
+          <INCLURE{fond=inclure/videos,id_document,ajax=videos}/>
+        </div>
+    </aside>
+</section>
+</BOUCLE_content>
+<section>
+  <header class="cartouche">
+      <h1><:cidse_campaign:upload_video:></h1>
+  </header>
+  <div class="none-js; display:none;">
+    #FORMULAIRE_JOINDRE_DOCUMENT{new,#ID_RUBRIQUE,rubrique,auto} <!--et non {new,article,#ID_ARTICLE} -->
+  </div>
+</section>
+<//B_content>

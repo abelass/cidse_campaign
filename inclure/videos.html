@@ -3,9 +3,8 @@
 ]
 <B_documents_joints>
   <section class="liste documents documents_joints">
-  <h2 class="h2"><:medias:titre_documents_joints:></h2>
   <div class="liste-items">
-    <BOUCLE_documents_joints(DOCUMENTS) {id_article?}{id_rubrique?} {id_produit ?} {extension IN mp4,movie,ogg,avi} {vu=non}{par num titre, date}>
+    <BOUCLE_documents_joints(DOCUMENTS) {id_article?}{id_rubrique?} {id_produit ?} {id_document ?}{extension IN mp4,movie,ogg,avi} {vu=non}{par num titre, date}>
     #MODELE{video,id=#ID_DOCUMENT}
     </BOUCLE_documents_joints>
   </div>
