@@ -13,8 +13,10 @@
   <licence>GNU/GPL</licence>
   
   <necessite nom="wsps_html5" compatibilite="[1.1.14;]" />
-  <necessite nom="va" compatibilite="[0.6.10;]" />
+  <necessite nom="mediaspip_player" compatibilite="[1.6.3;]" />
   
   <utilise nom="medias" compatibilite="[2.7.66;]" />
+  
+  <pipeline nom="formulaire_traiter" inclure="fourstepsforplanet_pipelines.php" />
 
 </paquet>
