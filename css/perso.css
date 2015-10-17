@@ -1,7 +1,11 @@
+.span8 {
+    width: 940px;
+}
+
 /*Home*/
 .composition_videos .liste-items .video{
-  width:100%;
-  max-width:200px;
+  width:188px;
+  height:135px;
   float:left
 }
 
@@ -15,3 +19,32 @@
     height: 64px;
 }
 
+@media (min-width: 1200px) {
+  .span8 {
+    width: 1170px;
+  }
+  .composition_videos .liste-items .video{
+    width:8px;
+    height:146px;
+  }
+}
+
+
+@media (max-width: 979px) and (min-width: 768px) {
+  .span8 {
+    width: 724px;
+  }
+  .composition_videos .liste-items .video{
+    width:180px;
+    height:133px;
+  }
+}
+
+@media (max-width: 767px){
+  .span8 {
+    width: 100%;
+  }
+  .composition_videos .liste-items .video{
+    width:25%;
+  }
+}
