@@ -6,10 +6,9 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// C
-	'cidse_campaign_titre' => 'Cidse Campaign',
-	
-  // U
-  'upload_video' => 'Upload your video',
+	'fourstepsforplanet_description' => 'Site de campagne',
+	'fourstepsforplanet_nom' => 'Cidse Campaign',
+	'fourstepsforplanet_slogan' => 'Site de campagne',
 );
 
 ?>

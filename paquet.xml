@@ -1,10 +1,10 @@
 <paquet
-  prefix="cidse_campaign"
+  prefix="fourstepsforplanet"
   categorie="communication"
   version="1.0.0"
   etat="dev"
   compatibilite="[3.0.20;3.0.*]"
-  logo="prive/themes/spip/images/cidse_campaign-64.png"
+  logo="prive/themes/spip/images/fourstepsforplanet-64.png"
   documentation=""
 >
 
