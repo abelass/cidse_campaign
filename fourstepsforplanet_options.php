@@ -1,12 +1,12 @@
 <?php
 /**
- * Options du plugin Cidse Campaign
+ * Pipelines du plugin Four Steps for the Planet
  *
- * @plugin     Cidse Campaign
+ * @plugin     Four Steps for the Planet
  * @copyright  2015
  * @author     Rainer Müller
  * @licence    GNU/GPL
- * @package    SPIP\Cidse_campaign\Options
+ * @package    SPIP\Fourstepsforplanet\Pipelines
  */
 
 
