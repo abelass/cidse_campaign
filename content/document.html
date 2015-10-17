@@ -1,23 +1,13 @@
 <BOUCLE_content(DOCUMENTS){id_document}{tout}>
 <section>
-    <div class="main">
-    [(#REM) Boite à outils]
-    [(#INCLURE{fond=inclure/outils,env})]        
-        [<div class="#EDIT{texte} texte">(#TEXTE)</div>]
-        <B_articles>
-        <br class="nettoyeur"/>
-        <BOUCLE_articles(ARTICLES){id_rubrique}{0,1}>
-            <div class="liste articles">
-            <INCLURE{fond=liste/articles-resume,env,ajax,titre=<:articles_rubrique:>} />
-            </div>
-        </BOUCLE_articles>
+    <div class="main">     
+  <header class="cartouche">
+      <h1><:fourstepsforplanet:share_video:></h1>
+  </header>
+       [(#REM) Le video]
+       <INCLURE{fond=inclure/videos,id_document,ajax=documents}/>
     </div>
 
-    <aside>
-          [(#REM) Gestion du portfolio et des documents ]
-          <INCLURE{fond=inclure/videos,id_document,ajax=videos}/>
-        </div>
-    </aside>
 </section>
 </BOUCLE_content>
 <section>
