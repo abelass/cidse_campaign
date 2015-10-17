@@ -6,7 +6,7 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// C
-	'fourstepsforplanet_titre' => 'Cidse Campaign',
+	'fourstepsforplanet_titre' => 'Four Steps for the Planet',
 	
   // U
   'upload_video' => 'Upload your video',

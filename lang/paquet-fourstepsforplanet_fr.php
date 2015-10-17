@@ -7,7 +7,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// C
 	'fourstepsforplanet_description' => 'Site de campagne',
-	'fourstepsforplanet_nom' => 'Cidse Campaign',
+	'fourstepsforplanet_nom' => 'Four Steps for the Planet',
 	'fourstepsforplanet_slogan' => 'Site de campagne',
 );
 
