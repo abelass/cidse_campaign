@@ -10,7 +10,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
   'fourstepsforplanet_titre' => 'Four Steps for the Planet',
 
   // S
-  'share_video' => 'Four Steps for the Planet',
+  'share_video' => 'Share your Video',
   'share_video_meta' => 'Check out this Video on Four Steps for the Planet',
   
   // U
