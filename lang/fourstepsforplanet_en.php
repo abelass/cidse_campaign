@@ -14,6 +14,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
   'share_video' => 'Share your Video',
   'share_video_meta' => 'Check out this Video on Four Steps for the Planet',
   
+  // T
+  'texte_compteur' => 'So far @compteur@ steps for the planet',
   // U
   'upload_video' => 'Upload your video',
 );
