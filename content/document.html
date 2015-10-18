@@ -5,7 +5,7 @@
   </header>
   <div class="main">     
     <div class="social"> </div>
-    <a class="btn btn-primary" href="#URL_SITE_SPIP"><:fourstepsforplanet:see_all_videos:></a>
+    <a class="btn btn-primary" href="[(#URL_SITE_SPIP|parametre_url{actualise,#ID_DOCUMENT})]"><:fourstepsforplanet:see_all_videos:></a>
      [(#REM) Le video]
      <INCLURE{fond=inclure/videos,id_document,autostart=oui}/>
     </div>
