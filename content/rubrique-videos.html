@@ -7,7 +7,7 @@
     <div class="main"> 
     <B_documents_joints>
       <div class="counter">
-        <BOUCLE_documents_joints(DOCUMENTS) {id_rubrique} {extension IN mp4,movie,ogg,avi,webm} {tout}{par num titre, date}> </BOUCLE_documents_joints> #SET{compteur,#TOTAL_BOUCLE|mult{4}}
+        <BOUCLE_documents_joints(DOCUMENTS) {id_rubrique} {extension IN mp4,mov,ogg,avi,webm} {tout}{par num titre, date}> </BOUCLE_documents_joints> #SET{compteur,#TOTAL_BOUCLE|mult{4}}
         <:fourstepsforplanet:texte_compteur{compteur=#GET{compteur}}:>
       </div>
     </B_documents_joints>
