@@ -1,5 +1,1 @@
-#SET{data,#INCLURE{fond=inclure/videos,id_rubrique=2,autostart=oui,rows=10,env}}
-[(#GET{data}|?{
-  #ARRAY{cond,1,post,#GET{data}},
-  #ARRAY{cond,0,post}
-})]
+[(#HTTP_HEADER{Content-type: text/javascript[; charset=(#CHARSET)]})]#SET{data,#INCLURE{fond=inclure/videos,id_rubrique=2,autostart=oui,rows=10,env}}[(#GET{data}|?{#ARRAY{cond,1,post,#GET{data}},#ARRAY{cond,0,post}}|json_encode)]

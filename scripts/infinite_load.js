@@ -1,15 +1,15 @@
-
-// latest post initialization
-var container = 'div.latest_videos';
-$(container).on('getLatestPost', function() {
-  $(this).append("<div class='loading-bar'><img src='../images/loading.gif' /><p>Loading Post</p></div>\n");
-
-  $(container + ' div.loading-bar').hide().fadeIn(300, function() {
-    setTimeout(getLatestPost, 300);
-  });
-});
 $( document ).ready(function() {
-$(container).trigger('getLatestPost');
+  // latest post initialization
+  var container = 'div.latest_videos';
+  $(container).on('getLatestPost', function() {
+    $(this).append("<div class='loading-bar'><img src='../images/loading.gif' /><p>Loading Post</p></div>\n");
+  
+    $(container + ' div.loading-bar').hide().fadeIn(300, function() {
+      setTimeout(getLatestPost, 300);
+    });
+  });
+  
+  $(container).trigger('getLatestPost');
 });
 
 //parameter
@@ -19,7 +19,7 @@ var PRM = {
 
 function getLatestPost() {
   $.ajax({
-    url : "/spip.php?page=latest_videos&page=" + PRM.post_page,
+    url : "/spip.php?page=latest_videos&p=" + PRM.post_page,
     cache : false,
     type : 'GET',
     success : function(data, status) {
