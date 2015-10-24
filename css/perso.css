@@ -5,7 +5,6 @@
 /*Home*/
 .composition_videos .liste-items .video{
   width:188px;
-  height:135px;
   float:left
 }
 
@@ -25,7 +24,6 @@
   }
   .composition_videos .liste-items .video{
     width:195px;
-    height:146px;
   }
 }
 
@@ -36,7 +34,6 @@
   }
   .composition_videos .liste-items .video{
     width:180px;
-    height:133px;
   }
 }
 
