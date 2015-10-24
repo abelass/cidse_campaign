@@ -17,8 +17,9 @@
       <a class="btn btn-primary" href="#URL_PAGE{document,id_document=new}"><:fourstepsforplanet:upload_video:></a>
     </div>
      [(#REM) Gestion du portfolio et des documents ]
-     <div class="latest_videos">
-      test
+     <div class="grid js-masonry"
+  data-masonry-options2='{ "columnWidth": ".grid-item", "itemSelector": ".grid-item" , "percentPosition": true}'>
+      <INCLURE{fond=inclure/videos,id_rubrique,autostart=oui,rows=50,loop=oui, muted=oui}/>
     </div>
     <footer>
         [<div class="notes"><h2><:info_notes:></h2>(#NOTES)</div>]
