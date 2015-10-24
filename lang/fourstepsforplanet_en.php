@@ -8,10 +8,15 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
   // C
   'fourstepsforplanet_titre' => 'Four Steps for the Planet',
+  
+  // L
+  'let_know' => 'Let them know why you’re walking for the planet and challenge them to join.',
 
   // S
   'see_all_videos' => 'See all videos',  
-  'share_video' => 'Share your Video',
+  'share_video' => 'Share your video and/or this action with your friends.',
+  'share_video_description_twitter' => 'climateaction  at #COP21. Walk with me? #Change4Planet @url@ via @ChangeandCare',
+  'share_video_title' => 'Thank you for walking with us!',
   'share_video_meta' => 'Check out this Video on Four Steps for the Planet',
   
   // T
