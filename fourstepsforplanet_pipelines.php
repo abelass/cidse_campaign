@@ -37,7 +37,8 @@ function fourstepsforplanet_formulaire_traiter($flux) {
  * @param  array $flux Données du pipeline
  * @return array       Données du pipeline
  */
-  function fourstepsforplanet_insert_head($flux){
-    $flux .= "<script src='" . find_in_path('scripts/infinite_load.js') ."' type='text/javascript'></script>\n";
-    return $flux;
+function fourstepsforplanet_insert_head($flux){
+  $flux .= "<script src='" . find_in_path('scripts/infinite_load.js') ."' type='text/javascript'></script>\n";
+  
+  return $flux;
   }
