@@ -1,12 +1,11 @@
  [(#REM) Gestion du portfolio et des documents ]
- #SET{pagination,20}
 <B_documents_joints>
 #SET{compteur,#TOTAL_BOUCLE|mult{4}}
   <div class="counter">
     <:fourstepsforplanet:texte_compteur{compteur=#GET{compteur}}:>
   </div>
   <div id="grid" class="transitions-enabled infinite-scroll clearfix">
-    <BOUCLE_documents_joints(DOCUMENTS) {id_rubrique} {extension = gif} {tout}{#ENV{debut_documents_joints,0}, #GET{pagination}} {!par date}> 
+    <BOUCLE_documents_joints(DOCUMENTS) {id_rubrique} {extension = gif} {tout}{#ENV{debut_documents_joints,0},10} {!par date}> 
     [<div class="grid-item document_#ID_DOCUMENT">
       <img src="(#URL_DOCUMENT)" alt="animated gif"/>
     </div>]
@@ -15,7 +14,7 @@
   <nav id="page-nav">
     <ul>
       <li>
-        <a class="lien_pagination" rel="nofollow" href="[(#SELF|parametre_url{debut_documents_joints,#GET{pagination}})]">next</a>
+        <a class="lien_pagination" rel="nofollow" href="[(#SELF|parametre_url{debut_documents_joints,20})]">next</a>
       </li>
     </ul>
     </nav>
