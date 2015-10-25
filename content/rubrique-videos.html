@@ -10,22 +10,7 @@
     <div class="button upload">
       <a class="btn btn-primary" href="#URL_PAGE{document,id_document=new}"><:fourstepsforplanet:upload_video:></a>
     </div>
-     [(#REM) Gestion du portfolio et des documents ]
-    <B_documents_joints>
-    #SET{compteur,#TOTAL_BOUCLE|mult{4}}
-      <div class="counter">
-        <:fourstepsforplanet:texte_compteur{compteur=#GET{compteur}}:>
-      </div>
-      <div class="grid">
-        <BOUCLE_documents_joints(DOCUMENTS) {id_rubrique} {extension = gif} {tout}{par hasard, date}{pagination 20}> 
-        <div class="grid-item">
-          <img src="#URL_DOCUMENT" alt="animated gif"/>
-        </div>
-        </BOUCLE_documents_joints> 
-        <p class="pagination" id="page-nav">#PAGINATION</p>
-      </div>
-    </B_documents_joints>
-    <footer>
+    <INCLURE{fond=inclure/documents,env}/>
         [<div class="notes"><h2><:info_notes:></h2>(#NOTES)</div>]
     </footer>
 </section>

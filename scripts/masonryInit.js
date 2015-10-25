@@ -4,7 +4,7 @@
 
 $(function(){
     
-    var $container = $('.grid');
+    var $container = $('#grid');
     
     $container.imagesLoaded(function(){
       $container.masonry({
@@ -35,7 +35,8 @@ $(function(){
           $newElems.animate({ opacity: 1 });
           $container.masonry( 'appended', $newElems, true ); 
         });
+        $('li.active').removeClass('active').next('li').addClass('active');
       }
     );
-    
+
   });

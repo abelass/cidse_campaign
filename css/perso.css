@@ -35,3 +35,5 @@
     width: 100%;
   }
 }
+
+li.active + li a {color:blue}
