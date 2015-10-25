@@ -7,7 +7,7 @@
 })]
 <B_documents_joints>
   <section class="liste videos documents_joints">
-  <div class="liste-items grid-item2">
+  <div class="liste-items grid-item">
     <BOUCLE_documents_joints(DOCUMENTS) {id_article?}{id_rubrique?} {id_produit?} {id_document?}{extension IN mp4,mov,ogg,avi,webm} {tout}{par num titre, date}{#GET{offset},#ENV{rows,0}}>
     #MODELE{emb,id_document=#ID_DOCUMENT,autostart=#ENV{autostart},loop=#ENV{loop},muted=#ENV{muted}}
     </BOUCLE_documents_joints>

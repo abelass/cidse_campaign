@@ -23,7 +23,7 @@ if (!defined('_ECRIRE_INC_VERSION'))
 function fourstepsforplanet_formulaire_traiter($flux) {
   $form = $flux['args']['form'];
 
-  if ($form == 'joindre_document') {
+  if ($form == 'joindre_document' AND !_request('exec')) {
     $id_document = $flux['data']['ids'][0];
     $flux['data']['redirect'] = generer_url_public("document","id_document=$id_document").$flux['data']['redirect'];
   }
@@ -38,7 +38,8 @@ function fourstepsforplanet_formulaire_traiter($flux) {
  * @return array       Données du pipeline
  */
 function fourstepsforplanet_insert_head($flux){
-  $flux .= "<script src='" . find_in_path('scripts/infinite_load.js') ."' type='text/javascript'></script>\n";
   $flux .= "<script src='" . find_in_path('scripts/masonry.pkgd.min.js') ."' type='text/javascript'></script>\n";
-  return $flux;
+  $flux .= "<script src='" . find_in_path('scripts/jquery.infinitescroll.min.js') ."' type='text/javascript'></script>\n";
+  $flux .= "<script src='" . find_in_path('scripts/imagesloaded.pkgd.min.js') ."' type='text/javascript'></script>\n";
+  $flux .= "<script src='" . find_in_path('scripts/masonryInit.js') ."' type='text/javascript'></script>\n";  return $flux;  
   }

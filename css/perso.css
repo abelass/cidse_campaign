@@ -2,10 +2,9 @@
     width: 940px;
 }
 
-/*Home*/
-.composition_videos .liste-items .video{
-  width:188px;
-  float:left
+/*Masonry*/
+.grid-item{
+  width:16.666666666%;
 }
 
 /*Form upload*/
@@ -22,9 +21,6 @@
   .span8 {
     width: 1170px;
   }
-  .composition_videos .liste-items .video{
-    width:195px;
-  }
 }
 
 
@@ -32,16 +28,10 @@
   .span8 {
     width: 724px;
   }
-  .composition_videos .liste-items .video{
-    width:180px;
-  }
 }
 
 @media (max-width: 767px){
   .span8 {
     width: 100%;
-  }
-  .composition_videos .liste-items .video{
-    width:25%;
   }
 }
