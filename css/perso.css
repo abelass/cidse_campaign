@@ -5,6 +5,7 @@
 /*Masonry*/
 .grid-item{
   width:16.666666666%;
+  float:left;
 }
 
 /*Form upload*/
