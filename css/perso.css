@@ -2,7 +2,7 @@
     width: 940px;
 }
 
-.rubrique_videos .container > .row{min-height:400px;}
+.rubrique_videos .container > .row{min-height:600px;}
 
 /*Masonry*/
 .grid-item{
