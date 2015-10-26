@@ -5,7 +5,7 @@
     <:fourstepsforplanet:texte_compteur{compteur=#GET{compteur}}:>
   </div>
   <div id="grid" class="transitions-enabled infinite-scroll clearfix">
-    <BOUCLE_documents_joints(DOCUMENTS) {id_rubrique} {extension = gif} {tout}{#ENV{debut_documents_joints,0},10} {!par date}> 
+    <BOUCLE_documents_joints(DOCUMENTS) {id_rubrique} {extension = gif} {tout}{#ENV{debut_documents_joints,0},20} {!par date}> 
     [<div class="grid-item document_#ID_DOCUMENT">
       <img src="(#URL_DOCUMENT)" alt="animated gif"/>
     </div>]
