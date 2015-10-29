@@ -1,12 +1,12 @@
 <?php
 /**
- * Pipelines du plugin Four Steps for the Planet
+ * Options du plugin Four Steps for the Planet
  *
  * @plugin     Four Steps for the Planet
  * @copyright  2015
  * @author     Rainer Müller
  * @licence    GNU/GPL
- * @package    SPIP\Fourstepsforplanet\Pipelines
+ * @package    SPIP\Fourstepsforplanet\Options
  */
 
 
@@ -17,12 +17,6 @@ if (!defined('_ECRIRE_INC_VERSION'))
  * 
  * Surcharge pour permettre l'upload d'un document pour un visiteur anonyme
  * 
- * On ne peut joindre un document qu'a un objet qu'on a le droit d'editer
- * mais il faut prevoir le cas d'une *creation* par un redacteur, qui correspond
- * au hack id_objet = 0-id_auteur
- * Il faut aussi que les documents aient ete actives sur les objets concernes
- * ou que ce soit un article, sur lequel on peut toujours uploader des images
- *
  * http://code.spip.net/@autoriser_joindredocument_dist
  *
  * @return bool
