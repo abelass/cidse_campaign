@@ -1,21 +1,18 @@
  [(#REM) Gestion du portfolio et des documents ]
 <B_documents_joints>
 #SET{compteur,#TOTAL_BOUCLE|mult{4}}
+#ANCRE_PAGINATION
   <div class="counter">
     <:fourstepsforplanet:texte_compteur{compteur=#GET{compteur}}:>
   </div>
   <div id="grid" class="transitions-enabled infinite-scroll clearfix">
-    <BOUCLE_documents_joints(DOCUMENTS) {id_rubrique} {extension IN #VAL|fsp_definitions} {tout}{#ENV{debut_documents_joints,0},10} {!par date}> 
-    [<div class="grid-item document_#ID_DOCUMENT">
-      (#MODELE{emb,id_document=#ID_DOCUMENT,muted=oui})
+    <BOUCLE_documents_joints(DOCUMENTS) {id_rubrique} {extension IN #VAL|fsp_definitions} {tout}{!par date} {pagination 12}> 
+    [<div class="grid-item" id="document_#ID_DOCUMENT">
+      (#MODELE{emb,id_document=#ID_DOCUMENT,muted=#ENV{muted,oui},largeur=#ENV{largeur,250},moviesize=#ENV{moviesize,adapt},preload=#ENV{preload,meta}})
     </div>]
     </BOUCLE_documents_joints> 
   </div>
-  <nav id="page-nav">
-    <ul>
-      <li>
-        <a class="lien_pagination" rel="nofollow" href="[(#SELF|parametre_url{debut_documents_joints,20})]">next</a>
-      </li>
-    </ul>
+  <nav id="page-nav" class="pagination">
+      #PAGINATION
     </nav>
 </B_documents_joints>

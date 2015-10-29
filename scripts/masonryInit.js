@@ -16,7 +16,7 @@ $(function(){
       });
     });
     
-    $container.infinitescroll({
+    /*$container.infinitescroll({
       navSelector  : '#page-nav',    // selector for the paged navigation 
       nextSelector : '#page-nav a',  // selector for the NEXT link (to page 2)
       itemSelector : '.grid-item',     // selector for all items you'll retrieve
@@ -24,9 +24,26 @@ $(function(){
           finishedMsg: 'No more pages to load.',
           img: 'http://i.imgur.com/6RMhx.gif'
         }
-      },
+    },*/
+$('video').load(function () {
+
+    postersLoaded++;
+
+    if (postersLoaded >= posterCount) {
+
+
+        $(container).masonry({
+            itemSelector: '.csContent'
+        });
+
+        $(container).masonry('reloadItems');
+        $(container).masonry('layout');
+
+    }
+
+})
       // trigger Masonry as a callback
-      function( newElements ) {
+     /*function( newElements ) {
         // hide new items while they are loading
         var $newElems = $( newElements ).css({ opacity: 0 });
         // ensure that images load before adding to masonry layout
@@ -36,7 +53,9 @@ $(function(){
           $container.masonry( 'appended', $newElems, true ); 
         });
         $('li.active').removeClass('active').next('li').addClass('active');
-      }
-    );
+      }*/
+    //);
+
 
   });
+  
