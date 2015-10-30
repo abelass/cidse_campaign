@@ -4,7 +4,7 @@
 
 /*Masonry*/
 .grid-item{
-  width:25%;
+  width:33.3333333%;
   float:left;
 }
 
@@ -30,7 +30,6 @@
     width: 724px;
   }
   .grid-item{
-    width:20%;
     float:left;
   }
 }
@@ -40,7 +39,6 @@
     width: 100%;
   }
   .grid-item{
-    width:25%;
     float:left;
   }
 }
