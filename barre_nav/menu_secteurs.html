@@ -1,0 +1,16 @@
+<B_rubriques>
+<div class="menu menu-container navbar-inner">
+  <ul class="menu-items menu-liste nav">
+	 <BOUCLE_rubriques(RUBRIQUES) {racine} {par num titre, titre}{tout}>
+		<li class="item menu-entree[ (#EXPOSE)]">
+			<a href="#URL_RUBRIQUE">[(#TITRE|couper{80})]</a>
+		</li>
+	 </BOUCLE_rubriques>
+	 </ul>
+</div>	
+</B_rubriques>
+<div id="google_translate_element"></div><script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+}
+</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
