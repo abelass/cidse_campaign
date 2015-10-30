@@ -6,7 +6,7 @@
     <:fourstepsforplanet:texte_compteur{compteur=#GET{compteur}}:>
   </div>
   <div id="grid" class="transitions-enabled infinite-scroll clearfix">
-    <BOUCLE_documents_joints(DOCUMENTS) {id_rubrique} {extension IN #VAL|fsp_definitions} {tout}{!par date} {pagination 12}> 
+    <BOUCLE_documents_joints(DOCUMENTS) {id_rubrique} {extension IN #VAL|fsp_definitions} {tout}{!par date} {pagination #ENV{pagination,12}}> 
     [<div class="grid-item" id="document_#ID_DOCUMENT">
       (#MODELE{emb,id_document=#ID_DOCUMENT,muted=#ENV{muted,oui},largeur=#ENV{largeur,250},moviesize=#ENV{moviesize,adapt},preload=#ENV{preload,meta}})
     </div>]
