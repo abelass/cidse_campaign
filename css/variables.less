@@ -28,6 +28,7 @@
 @orange:                #f89406;
 @pink:                  #c3325f;
 @purple:                #7a43b6;
+@green:                 #4e7b58;
 
 
 // Scaffolding
@@ -44,8 +45,19 @@
 
 // Typography
 // -------------------------
+@font-face {
+  font-family:"Cardenio Modern";
+  src:url("font_face/Cardenio_Modern.eot?") format("eot"),
+    url("font_face/Cardenio_Modern.woff") format("woff"),
+    url("font_face/Cardenio_Modern.ttf") format("truetype"),
+    url("font_face/Cardenio_Modern.svg#CardenioModern") format("svg");
+  font-weight:normal;font-style:normal;
+  }
+
+
 @sansFontFamily:        "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
-@serifFontFamily:       Georgia, Cambria, Times New Roman, Times, serif;
+@fontCardenioModern:    "Cardenio Modern";
+@serifFontFamily:       Arial, Georgia, Cambria, Times New Roman, Times, serif;
 @monoFontFamily:        "Courier New", Courier, monospace;
 
 @baseFontSize:          14px;
@@ -53,8 +65,8 @@
 @baseLineHeight:        20px;
 @altFontFamily:         @sansFontFamily;
 
-@headingsFontFamily:    @baseFontFamily; // empty to use BS default, @baseFontFamily
-@headingsFontWeight:    normal;    // instead of browser default, bold
+@headingsFontFamily:    @fontCardenioModern; 
+@headingsFontWeight:    bold;    // instead of browser default, bold
 @headingsColor:         inherit; // empty to use BS default, @textColor
 
 
@@ -195,13 +207,13 @@
 @navbarBrandColor:                @navbarLinkColor;
 
 // Inverted navbar
-@navbarInverseBackground:                #111111;
-@navbarInverseBackgroundHighlight:       #222222;
-@navbarInverseBorder:                    #252525;
+@navbarInverseBackground:                transparent;
+@navbarInverseBackgroundHighlight:       transparent;
+@navbarInverseBorder:                    none;
 
-@navbarInverseText:                      @grayLight;
-@navbarInverseLinkColor:                 @grayLight;
-@navbarInverseLinkColorHover:            @white;
+@navbarInverseText:                      @green;
+@navbarInverseLinkColor:                 @green;
+@navbarInverseLinkColorHover:            lighten(@green, 25%);
 @navbarInverseLinkColorActive:           @navbarInverseLinkColorHover;
 @navbarInverseLinkBackgroundHover:       transparent;
 @navbarInverseLinkBackgroundActive:      @navbarInverseBackground;
