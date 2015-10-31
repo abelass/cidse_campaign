@@ -1,16 +1,43 @@
 @import "css/variables.less";
 
+.container {
+    background-image:url(images/bg_blanc.png);
+}
+
 #logo_site_spip {display:none}
 
 /*Naviagtion*/
 
 .navbar-inner {
-    border: none;
-    border-radius: 0;
-    box-shadow: none;
-    font-family: @headingsFontFamily;
-    font-size: 2em;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  font-family: @headingsFontFamily;
+  font-size: 4em;
+  text-align:center;
+  ul.nav{
+    margin: 0 auto;
+    float:none;}
+  li {
+    line-height: 1.4em;
+    padding-bottom: 18px;
   }
+
+  li.on, li:hover{
+      background-image:url(images/noeud_petit.png);
+      background-repeat:no-repeat;
+      background-position: 50% 100%;
+      a {border-bottom: 3px solid}
+    }
+  }
+  
+.navbar .nav > li {
+  display: inline-block;
+  float: none;
+}
+
+.navbar .nav > li > a{ padding: 10px 15px 0;}
+
 
 /*Masonry*/
 .grid-item{
