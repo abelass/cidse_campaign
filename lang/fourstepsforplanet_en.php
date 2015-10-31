@@ -25,5 +25,8 @@ Click here to join this call to action by the campaign “Change for the planet 
   'texte_compteur' => 'So far @compteur@ steps for the planet',
   // U
   'upload_video' => 'Upload your video',
+  
+  // W
+  'walk_us' => "Walk with us",
 );
 ?>

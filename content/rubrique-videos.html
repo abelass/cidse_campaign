@@ -1,17 +1,15 @@
 <BOUCLE_content(RUBRIQUES){id_rubrique}{tout}>
 <section>
     <header class="cartouche">
-
-      <h1 class="#EDIT{titre}">#TITRE</h1>
+      <h1 class="#EDIT{titre}">#NOM_SITE_SPIP</h1>
+        [<div class="#EDIT{texte} texte">(#TEXTE)</div>]  
+        <div class="button walk">
+          <a href="#walk"><:fourstepsforplanet:walk_us:></a>
+        </div>
     </header>
-    <div class="main"> 
-        [<div class="#EDIT{texte} texte">(#TEXTE)</div>]
-    </div>
-    <div class="button upload">
-      <a class="btn btn-primary" href="#URL_PAGE{document,id_document=new}"><:fourstepsforplanet:upload_video:></a>
-    </div>
-    <INCLURE{fond=inclure/documents,env}/>
-        [<div class="notes"><h2><:info_notes:></h2>(#NOTES)</div>]
+
+    
+
     </footer>
 </section>
 </BOUCLE_content>

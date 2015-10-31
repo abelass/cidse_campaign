@@ -1,33 +1,55 @@
 @import "css/variables.less";
 
+/*Titraille*/
+h1,.h1{
+  text-align:center;
+  display:inline-block;
+  margin:0 auto;
+  padding: 0 26px;
+  background-image:url(images/h1_vert_left.png),url(images/h1_vert_right.png);
+  background-repeat:no-repeat;
+  background-position:left,right;
+  color:@navbarInverseText;
+  font-size:3.8em;
+  }
+
 .container {
-    background-image:url(images/bg_blanc.png);
+    background-image:url(images/bg_blanc.jpg);
+}
+
+.cartouche {text-align:center}
+
+.content{
+  p{
+    width:52%;
+    margin:0 auto;
+  }
 }
 
 #logo_site_spip {display:none}
 
-/*Naviagtion*/
+/*Navigation*/
 
 .navbar-inner {
   border: none;
   border-radius: 0;
   box-shadow: none;
   font-family: @headingsFontFamily;
-  font-size: 4em;
+  font-size: 2em;
   text-align:center;
   ul.nav{
     margin: 0 auto;
     float:none;}
   li {
-    line-height: 1.4em;
-    padding-bottom: 18px;
+    line-height: normal;
+    padding-bottom: 10px;
   }
 
   li.on, li:hover{
       background-image:url(images/noeud_petit.png);
       background-repeat:no-repeat;
       background-position: 50% 100%;
-      a {border-bottom: 3px solid}
+      a {border-bottom: 2px solid}
     }
   }
   
@@ -38,11 +60,17 @@
 
 .navbar .nav > li > a{ padding: 10px 15px 0;}
 
+/* buttons */
 
-/*Masonry*/
-.grid-item{
-  width:33.3333333%;
-  float:left;
+.button{
+  font-family: @headingsFontFamily;
+  font-size: 3em;
+  margin:1em 0;
+  background-image:url(images/button_white_left.png),url(images/button_white_right.png),url(images/button_white_center.png);
+  background-repeat:no-repeat,no-repeat,no-repeat;
+  background-position:left,right,center bottom;
+  padding: 0.821em 0.8em;
+  display:inline-block;
 }
 
 /*Form upload*/
@@ -54,6 +82,35 @@
 .socialtags img {
     height: 64px;
 }
+
+/* Home */
+
+/*Masonry*/
+.grid-item{
+  width:33.3333333%;
+  float:left;
+}
+
+
+.home {
+  .button a{ color:#FFFFFF}
+  #content {
+    .cartouche {
+      h1{
+        color:#FFFFFF;
+        font-weight:normal;
+        background-image:url(images/h1_blanc_left.png),url(images/h1_blanc_right.png);
+      }
+      padding:340px 0 1em 0;
+      display: block !important;
+      background-image:url(images/bg_pieds.jpg),url(images/bg_vert.jpg);
+      background-position: 0 0, 0 340px;
+      background-repeat:no-repeat,repeat-y;
+      color:#FFFFFF;
+    }    
+  }
+}
+
 
 @media (min-width: 1200px) {
 
