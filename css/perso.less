@@ -30,10 +30,24 @@ h1,.h1{
 
 /*Navigation*/
 
+.navbar {
+  background-image:url(images/bg_blanc.jpg);
+  position: fixed;
+  top: 0;
+  padding-bottom:1em;
+  width: @gridRowWidth;
+  z-index: 200;
+  .nav > li {
+    display: inline-block;
+    float: none;
+  }
+}
+
 .navbar-inner {
   border: none;
   border-radius: 0;
   box-shadow: none;
+  position:relative;
   ul.nav{
     font-family: @headingsFontFamily;
     font-size: 2em;
@@ -51,12 +65,15 @@ h1,.h1{
       background-position: 50% 100%;
       a {border-bottom: 2px solid}
     }
+  .tools{
+    left: 960px;
+    position: absolute;
+    top: 10px;
+    text-align:right;
+    }
   }
   
-.navbar .nav > li {
-  display: inline-block;
-  float: none;
-}
+
 
 .navbar .nav > li > a{ padding: 10px 15px 0;}
 
@@ -131,15 +148,13 @@ h1,.h1{
 
 
 @media (min-width: 1200px) {
-
+  .navbar {width:@gridRowWidth1200}
 }
 
-
 @media (max-width: 979px) and (min-width: 768px) {
-
+  .navbar {width:@gridRowWidth768}
 }
 
 @media (max-width: 767px){
-
+  .navbar {width:100%}
 }
-
