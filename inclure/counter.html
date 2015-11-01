@@ -1,0 +1,7 @@
+ [(#REM) Compteur des vidéos]
+<B_documents_joints>
+#SET{compteur,#TOTAL_BOUCLE|mult{4}}
+  <div class="circle counter">
+    <:fourstepsforplanet:texte_compteur{compteur=#GET{compteur}}:>
+  </div>
+    <BOUCLE_documents_joints(DOCUMENTS) {id_rubrique} {extension IN #VAL|fsp_definitions} {tout}> </BOUCLE_documents_joints>

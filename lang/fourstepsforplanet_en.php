@@ -22,7 +22,7 @@ Click here to join this call to action by the campaign “Change for the planet 
   'share_video_meta' => 'Check out this Video on Four Steps for the Planet',
   
   // T
-  'texte_compteur' => 'So far @compteur@ steps for the planet',
+  'texte_compteur' => 'Already @compteur@ steps',
   // U
   'upload_video' => 'Upload your video',
   

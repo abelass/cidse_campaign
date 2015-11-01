@@ -34,15 +34,15 @@ h1,.h1{
   border: none;
   border-radius: 0;
   box-shadow: none;
-  font-family: @headingsFontFamily;
-  font-size: 2em;
-  text-align:center;
   ul.nav{
+    font-family: @headingsFontFamily;
+    font-size: 2em;
+    text-align:center;
     margin: 0 auto;
     float:none;}
   li {
     line-height: normal;
-    padding-bottom: 10px;
+    padding-bottom: 7px;
   }
 
   li.on, li:hover{
@@ -73,6 +73,19 @@ h1,.h1{
   display:inline-block;
 }
 
+/* Counter*/
+
+.circle{
+  font-family: @headingsFontFamily;
+  background:url(images/cercle_blanc.png) no-repeat center;
+  background-size: 100%;
+  display: inline-block;
+  font-size: 2em;
+  line-height: 1em;
+  max-width: 58px;
+  padding: 1.6em;
+  }
+
 /*Form upload*/
 #joindre_distant__new, #joindre_mediatheque__new, .sourceup, .formulaire_joindre_document h3.titrem {
     display: none;
@@ -94,6 +107,11 @@ h1,.h1{
 
 .home {
   .button a{ color:#FFFFFF}
+  .counter{
+    position: absolute;
+    right: 56px;
+    top: 286px;
+    }
   #content {
     .cartouche {
       h1{
