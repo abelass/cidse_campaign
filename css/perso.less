@@ -31,28 +31,30 @@ h1,.h1{
 /*Navigation*/
 
 .navbar {
-  background-image:url(images/bg_blanc.jpg);
-  position: fixed;
-  top: 0;
   padding-bottom:1em;
-  width: @gridRowWidth;
-  z-index: 200;
   .nav > li {
     display: inline-block;
     float: none;
   }
 }
 
+.navbar-inverse .navbar-inner {
+    background-image:url(images/bg_blanc.jpg);
+}
 .navbar-inner {
+  position: fixed;
+  width: @gridRowWidth;
+  z-index: 200;
   border: none;
   border-radius: 0;
   box-shadow: none;
-  position:relative;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom:1em;
   ul.nav{
     font-family: @headingsFontFamily;
     font-size: 2em;
     text-align:center;
-    margin: 0 auto;
     float:none;}
   li {
     line-height: normal;
@@ -66,14 +68,18 @@ h1,.h1{
       a {border-bottom: 2px solid}
     }
   .tools{
-    left: 960px;
-    position: absolute;
-    top: 10px;
-    text-align:right;
+    display:inline-block;
+    position: relative;
+    text-align: left;
+    top: -7px;
+    div {display:inline-block}
     }
   }
   
-
+.nav-collapse.collapse {
+    display: inline-block;
+    margin: 0 auto;
+}
 
 .navbar .nav > li > a{ padding: 10px 15px 0;}
 
@@ -83,9 +89,9 @@ h1,.h1{
   font-family: @headingsFontFamily;
   font-size: 3em;
   margin:1em 0;
-  background-image:url(images/button_white_left.png),url(images/button_white_node.png),url(images/button_white_right.png),url(images/button_white_center.png);
-  background-repeat:no-repeat,no-repeat,no-repeat,repeat-x;
-  background-position:left,center bottom,right,center;
+  background-image:url(images/button_white_left.png), url(images/button_white_node.png), url(images/button_white_right.png), url(images/button_white_center.png);
+  background-repeat:no-repeat, no-repeat, no-repeat, repeat-x;
+  background-position:left, center bottom, right,center;
   padding: 0.78em 0.8em;
   display:inline-block;
 }
@@ -131,12 +137,19 @@ h1,.h1{
     }
   #content {
     .cartouche {
+      .spip_logos{
+        float:none;
+        bottom: 63px;
+        position: absolute;
+        right: 48px;
+        }
       h1{
         color:#FFFFFF;
         font-weight:normal;
         background-image:url(images/h1_blanc_left.png),url(images/h1_blanc_right.png);
       }
       padding:398px 0 1em 0;
+      margin-top: 63px;
       display: block !important;
       background-image:url(images/bg_pieds.jpg),url(images/bg_vert.jpg);
       background-position: 0 0, 0 340px;
@@ -148,13 +161,13 @@ h1,.h1{
 
 
 @media (min-width: 1200px) {
-  .navbar {width:@gridRowWidth1200}
+  .navbar-inner {width:@gridRowWidth1200}
 }
 
 @media (max-width: 979px) and (min-width: 768px) {
-  .navbar {width:@gridRowWidth768}
+  .navbar-inner {width:@gridRowWidth768}
 }
 
 @media (max-width: 767px){
-  .navbar {width:100%}
+  .navbar-inner {width:100%}
 }
