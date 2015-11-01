@@ -17,13 +17,14 @@ h1,.h1{
     background-image:url(images/bg_blanc.jpg);
 }
 
-.cartouche {text-align:center}
-
-.content{
-  p{
-    width:52%;
-    margin:0 auto;
+.cartouche {
+  text-align:center;
+  .wrapper{position:relative;}
   }
+
+.inner-content{
+  width:52%;
+  margin:0 auto;
 }
 
 #logo_site_spip {display:none}
@@ -88,12 +89,15 @@ h1,.h1{
 .button{
   font-family: @headingsFontFamily;
   font-size: 3em;
-  margin:1em 0;
   background-image:url(images/button_white_left.png), url(images/button_white_node.png), url(images/button_white_right.png), url(images/button_white_center.png);
   background-repeat:no-repeat, no-repeat, no-repeat, repeat-x;
-  background-position:left, center bottom, right,center;
-  padding: 0.78em 0.8em;
+  background-position:left top, center bottom, right top,center top;
   display:inline-block;
+  a{
+    display: block;
+    line-height: 1.5em;
+    padding: 0 1em 0.2em;
+  }
 }
 
 /* Counter*/
@@ -137,9 +141,10 @@ h1,.h1{
     }
   #content {
     .cartouche {
+      .wrapper{margin-top:2em;}
       .spip_logos{
         float:none;
-        bottom: 63px;
+        top: 0;
         position: absolute;
         right: 48px;
         }
