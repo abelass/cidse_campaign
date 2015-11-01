@@ -25,6 +25,7 @@ h1,.h1{
 .inner-content{
   width:52%;
   margin:0 auto;
+  text-align:center;
 }
 
 #logo_site_spip {display:none}
@@ -89,7 +90,7 @@ h1,.h1{
 .button{
   font-family: @headingsFontFamily;
   font-size: 3em;
-  background-image:url(images/button_white_left.png), url(images/button_white_node.png), url(images/button_white_right.png), url(images/button_white_center.png);
+  background-image:url(images/button_green_beige_left.png), url(images/button_green_node.png), url(images/button_green_beige_right.png), url(images/button_green_center.png);
   background-repeat:no-repeat, no-repeat, no-repeat, repeat-x;
   background-position:left top, center bottom, right top,center top;
   display:inline-block;
@@ -133,7 +134,6 @@ h1,.h1{
 
 
 .home {
-  .button a{ color:#FFFFFF}
   .counter{
     position: absolute;
     right: 56px;
@@ -141,6 +141,13 @@ h1,.h1{
     }
   #content {
     .cartouche {
+      padding:398px 0 7em 0;
+      margin-top: 63px;
+      display: block !important;
+      background-image:url(images/bg_pieds.jpg),url(images/bg_vert.jpg);
+      background-position: 0 0, 0 340px;
+      background-repeat:no-repeat,repeat-y;
+      color:#FFFFFF;
       .wrapper{margin-top:2em;}
       .spip_logos{
         float:none;
@@ -153,14 +160,29 @@ h1,.h1{
         font-weight:normal;
         background-image:url(images/h1_blanc_left.png),url(images/h1_blanc_right.png);
       }
-      padding:398px 0 1em 0;
-      margin-top: 63px;
-      display: block !important;
-      background-image:url(images/bg_pieds.jpg),url(images/bg_vert.jpg);
-      background-position: 0 0, 0 340px;
-      background-repeat:no-repeat,repeat-y;
-      color:#FFFFFF;
+      .button {
+        background-image:url(images/button_white_left.png), url(images/button_white_node.png), url(images/button_white_right.png), url(images/button_white_center.png);
+         a{ color:#FFFFFF}
+      }
     }    
+  }
+  .about{
+      background-image:url(images/bg_beige_top.png),url(images/bg_beige_bottom.png);
+      background-position: left top, left bottom;
+      background-repeat:no-repeat, no-repeat;
+      margin-top:-5em;
+      padding:2em 0 5em 0;
+      color:@green;
+      .button{font-size:2.7em}
+      .inner{
+        background-image:url(images/bg_beige.jpg);
+        background-position: left top;
+        background-repeat:repeat-y;
+      }
+      .item{
+        width:24%;
+        display:inline-block;
+        }
   }
 }
 

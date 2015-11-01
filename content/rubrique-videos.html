@@ -3,13 +3,29 @@
     <header class="cartouche">
       <INCLURE{fond=inclure/counter,id_rubrique}/>
       <h1 class="#EDIT{titre}">#NOM_SITE_SPIP</h1>
-        [<div class="#EDIT{texte} texte">(#TEXTE)</div>]  
-        <div class="button walk">
-          <a href="#walk"><:fourstepsforplanet:walk_us:></a>
+        [<div class="#EDIT{texte} texte inner-content">(#TEXTE)</div>]
+        <div class="wrapper">
+          <div class="button about_this">
+            <a href="#walk"><:fourstepsforplanet:walk_us:></a>
+          </div>
+          #LOGO_SITE_SPIP
         </div>
-        #LOGO_SITE_SPIP
     </header>
-
+    <div class="bg_wrapper about">
+      <div class="inner">
+         <div class=" inner-content">
+        <BOUCLE_mots(MOTS){id_groupe=1}>
+          <div class="item">
+            #LOGO_MOTS
+            #DESCRIPTIF
+          </div>
+        </BOUCLE_mots>
+          <div class="button about_this">
+            <a href="#URL_RUBRIQUE{3}">#INFO_TITRE{rubrique,3}</a>
+          </div>
+        </div>
+      </div>
+    </div>
     
 
     </footer>
