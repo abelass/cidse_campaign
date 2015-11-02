@@ -221,7 +221,7 @@ header{text-align:center}
     }
     .counter {
       left: 9%;
-      color:@green;
+      color:@navbarInverseText;
       background-image:url(images/cercle_vert.png);
       }
   }
@@ -230,8 +230,7 @@ header{text-align:center}
 /* Page upload */
 
 .rubrique_upload{
-
-  .inner-content{color:@green}
+  .inner-content{color:@navbarInverseText}
   .steps, .hashtag,.action{
     font-family: @headingsFontFamily;
   }
@@ -274,6 +273,63 @@ header{text-align:center}
     .got_to {
       width:150px;
       margin: 0 auto;
+    }
+  }
+}
+
+/*Page Act4Planet*/
+
+.rubrique_act{
+  #content{
+    
+  }
+  .cartouche{
+    font-family: @headingsFontFamily;
+    font-weight:bold;
+    div{
+      font-size:2em;
+      line-height:normal;
+      }
+  }
+  .tweets{
+    margin-bottom:3em;
+    .wrapper{
+      margin: 0 auto;
+      width: 95%;
+      }
+    .wrapper > div {width:50%}
+    .item{
+      margin: 1.5em 0.8em;
+      background: url("images/action.png") no-repeat right center;
+      padding:0;
+      p{
+        min-height: 40px;
+        padding: 0.5em;
+        border:@navbarInverseText 2px solid;
+        margin: 0 40px 0 0;
+        }
+    }
+  }
+  .images{
+    background-image: url("images/bg_beige_top.png"), url("images/bg_beige_bottom.png");
+    background-position: left top, left bottom;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 100% auto;
+    padding: 2em 0 5em;
+    .inner{
+      background-image: url("images/bg_beige.jpg");
+      background-position: left top;
+      background-repeat: repeat-y;
+      background-size: 100% auto;
+    }
+  }
+  .liste_images{
+    margin: 4em auto;
+    width: 70%;
+    .item{
+      float:left;
+      width: 33%;
+      margin-bottom: 3em;
     }
   }
 }
