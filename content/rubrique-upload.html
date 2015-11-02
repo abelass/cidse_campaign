@@ -3,9 +3,28 @@
   <header class="cartouche">
     <INCLURE{fond=inclure/counter,id_rubrique}/>
     <h1 class="#EDIT{titre}">#NOM_SITE_SPIP 1</h1>
-      [<div class="#EDIT{texte} texte inner-content">(#TEXTE)</div>]
   </header>
   <div class="inner-content">
+   [<div class="#EDIT{texte} texte">(#TEXTE)</div>]
+   <div class="steps">
+     <div class="step">
+       <img src="#CHEMIN{images/upload_step1.png}" alt="Upload Step 1" />
+       <div>STEP 1<br /> HOLD CAMERA ON TOP</div>
+     </div>
+     <div class="step">
+       <img src="#CHEMIN{images/upload_step2.png}" alt="Upload Step 2" />
+       <div>STEP 2 <br />TAKE 4 STEPS</div>
+     </div>
+     <div class="step">
+       <img src="#CHEMIN{images/upload_step3.png}" alt="Upload Step 3" />
+       <div>STEP 3 <br />UPOAD</div>
+     </div>   
+     <div class="step">
+       <img src="#CHEMIN{images/upload_step4.png}" alt="Upload Step 4" />
+       <div>STEP 4 <br />SHARE MOVIE + #CHANGE4PLANET</div>
+     </div>        
+   </div>
+   <br class="clear" />
     <INCLURE{fond=inclure/document,env}/>
   </div>
 </section>

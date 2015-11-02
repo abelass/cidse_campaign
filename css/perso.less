@@ -233,11 +233,26 @@ header{text-align:center}
 /* Page upload */
 
 .rubrique_upload{
+
+  .inner-content{color:@green}
+  .steps{
+    font-family: @headingsFontFamily;
+  }
+  .step{
+    width:25%; 
+    float:left;
+    div {margin: 0.5em 2em;}
+  }
+  
   .button{
     background-image:url(images/button_green_white_left_big.png), url(images/button_green_white_node_big.png), url(images/button_green_white_right_big.png), url(images/button_green_center_big.png);
     font-size:3.18em;
     color:@green;
+    clear:both;
+    margin-top: 1em;
   }
+  
+  label{display:hidden}
 }
 
 @media (min-width: 1200px) {
