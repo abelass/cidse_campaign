@@ -8,9 +8,9 @@
   <div id="grid" class="transitions-enabled infinite-scroll clearfix">
     <BOUCLE_documents_joints(DOCUMENTS) {id_rubrique} {extension IN #VAL|fsp_definitions} {tout}{!par date} {pagination #ENV{pag,6}}>
     [<div class="grid-item" id="document_#ID_DOCUMENT">
-	  (#MODELE{emb,id_document=#ID_DOCUMENT,muted=#ENV{muted,oui},largeur=#ENV{largeur,100%},moviesize=#ENV{moviesize,adapt},autoplay=#ENV{autoplay,non},preload=#ENV{preload,meta}})
+	  (#MODELE{emb,id_document=#ID_DOCUMENT,muted=#ENV{muted,oui},largeur=#ENV{largeur,100%},moviesize=#ENV{moviesize,null},autoplay=#ENV{autoplay,non},preload=#ENV{preload,meta}})
     </div>]
-    </BOUCLE_documents_joints> 
+    </BOUCLE_documents_joints>
   </div>
   <nav id="page-nav" class="pagination">
       #PAGINATION

@@ -13,25 +13,31 @@
     </header>
     <div class="bg_wrapper about">
       <div class="inner">
-         <div class=" inner-content">
+         <div class="items">
         <BOUCLE_mots(MOTS){id_groupe=1}>
           <div class="item">
             #LOGO_MOTS
             #DESCRIPTIF
           </div>
         </BOUCLE_mots>
+        </div>
           <div class="button about_this">
             <a href="#URL_RUBRIQUE{3}">#INFO_TITRE{rubrique,3}</a>
           </div>
-        </div>
       </div>
     </div>
     <div class="bg_wrapper walk" id="walk">
+      <header>
+        <h2 class="h1"><:fourstepsforplanet:walk_us:></h2>
+      </header>
+      <div class="button">#SET{titre,#INFO_TITRE{rubrique,5}}
+        <a href="#URL_RUBRIQUE{5}" title="#GET{titre}">#GET{titre}</a>
+      </div>
       <div class="inner">
         <INCLURE{fond=inclure/documents,env}/>
       </div>
     </div>
-    
+
 
     </footer>
 </section>
