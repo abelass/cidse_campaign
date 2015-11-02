@@ -1,0 +1,12 @@
+<BOUCLE_content(RUBRIQUES){id_rubrique}{tout}>
+<section>
+  <header class="cartouche">
+    <INCLURE{fond=inclure/counter,id_rubrique}/>
+    <h1 class="#EDIT{titre}">#NOM_SITE_SPIP 1</h1>
+      [<div class="#EDIT{texte} texte inner-content">(#TEXTE)</div>]
+  </header>
+  <div class="inner-content">
+    <INCLURE{fond=inclure/document,env}/>
+  </div>
+</section>
+</BOUCLE_content>

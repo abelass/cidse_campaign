@@ -2,9 +2,6 @@
 
 /*Titraille*/
 h1,.h1{
-  text-align:center;
-  display:inline-block;
-  margin:0 auto;
   padding: 0 26px;
   background-image:url(images/h1_vert_left.png),url(images/h1_vert_right.png);
   background-repeat:no-repeat;
@@ -12,11 +9,23 @@ h1,.h1{
   color:@navbarInverseText;
   font-size:3.8em;
   }
-
-.container {
-    background-image:url(images/bg_blanc.jpg);
+h1,.h1,h2,.h2,h3,h4{
+  text-align:center;
+  display:inline-block;
 }
 
+/* Geénéral */
+
+header{text-align:center}
+
+.container {
+  background-image:url(images/bg_blanc.jpg);
+}
+
+#content{
+  text-align: center;
+  margin-top: 63px;
+  }
 .cartouche {
   text-align:center;
   .wrapper{position:relative;}
@@ -29,6 +38,12 @@ h1,.h1{
 }
 
 #logo_site_spip {display:none}
+
+.bg_wrapper{position:relative;}
+
+.formulaire_spip,.formulaire_spip .boutons {background-color:transparent}
+
+.formulaire_spip .boutons {border:none}
 
 /*Navigation*/
 
@@ -77,7 +92,7 @@ h1,.h1{
     div {display:inline-block}
     }
   }
-  
+
 .nav-collapse.collapse {
     display: inline-block;
     margin: 0 auto;
@@ -94,18 +109,20 @@ h1,.h1{
   background-repeat:no-repeat, no-repeat, no-repeat, repeat-x;
   background-position:left top, center bottom, right top,center top;
   display:inline-block;
-  a{
+  a,span{
     display: block;
     line-height: 1.5em;
-    padding: 0 1em 0.2em;
+    padding: 0 0.8em 0.2em;
   }
 }
 
 /* Counter*/
 
-.circle{
+.counter{
   font-family: @headingsFontFamily;
-  background:url(images/cercle_blanc.png) no-repeat center;
+  background-image:url(images/cercle_blanc.png);
+  background-repeat:no-repeat;
+  background-position:center;
   background-size: 100%;
   display: inline-block;
   font-size: 2em;
@@ -132,21 +149,20 @@ h1,.h1{
   float:left;
 }
 
-
 .home {
   #content {
     .cartouche {
       padding:398px 0 7em 0;
-      margin-top: 63px;
       display: block !important;
       background-image:url(images/bg_pieds.jpg),url(images/bg_vert.jpg);
       background-position: 0 0, 0 340px;
       background-repeat:no-repeat,repeat-y;
+      background-size: 100%;
       color:#FFFFFF;
       .counter{
         position: absolute;
-        right: 56px;
-        top: 286px;
+        right: 36px;
+        top: 217px;
         }
       .wrapper{margin-top:2em;}
       .spip_logos{
@@ -164,31 +180,88 @@ h1,.h1{
         background-image:url(images/button_white_left.png), url(images/button_white_node.png), url(images/button_white_right.png), url(images/button_white_center.png);
          a{ color:#FFFFFF}
       }
-    }    
+    }
   }
   .about{
+      font-family: @headingsFontFamily;
       background-image:url(images/bg_beige_top.png),url(images/bg_beige_bottom.png);
       background-position: left top, left bottom;
       background-repeat:no-repeat, no-repeat;
+      background-size: 100%;
       margin-top:-5em;
-      padding:2em 0 5em 0;
+      padding:2em 0 4em 0;
       color:@green;
       .button{font-size:2.7em}
       .inner{
         background-image:url(images/bg_beige.jpg);
         background-position: left top;
         background-repeat:repeat-y;
+        background-size: 100%;
       }
-      .item{
-        width:24%;
-        display:inline-block;
-        }
+    .item{
+      width:25%;
+      display:inline-block;
+      margin-right:-1.6em;
+      p {padding:0.5em 1em 0.5em;}
+      }
+    .items {
+      margin: 0.5em auto 1em;
+      width: 790px;
+      font-size:1.6em;
+    }
+  }
+  .walk{
+    h2.h1{margin:1em 0;}
+    .counter,.button{
+      position:absolute;
+      top:0;
+    }
+    .button{
+      right:1%;
+      top:1.3em;
+      background-image:url(images/button_green_white_left_big.png), url(images/button_green_white_node_big.png), url(images/button_green_white_right_big.png), url(images/button_green_center_big.png);
+      font-size:3.18em;
+    }
+    .counter {
+      left: 9%;
+      color:@green;
+      background-image:url(images/cercle_vert.png);
+      }
   }
 }
 
+/* Page upload */
+
+.rubrique_upload{
+  .button{
+    background-image:url(images/button_green_white_left_big.png), url(images/button_green_white_node_big.png), url(images/button_green_white_right_big.png), url(images/button_green_center_big.png);
+    font-size:3.18em;
+    color:@green;
+  }
+}
 
 @media (min-width: 1200px) {
   .navbar-inner {width:@gridRowWidth1200}
+  .home {
+    #content {
+      .cartouche {
+        .counter{
+          right: 56px;
+          top: 286px;
+          }
+      }
+    }
+    .about{padding:2em 0 5em 0;}
+    .walk{
+      .button{
+        right:4%;
+        top:1.3em;
+      }
+      .counter {
+        left: 11%;
+        }
+     }
+  }
 }
 
 @media (max-width: 979px) and (min-width: 768px) {
