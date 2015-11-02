@@ -7,15 +7,10 @@
       [<div class="navbar navbar-inverse navbar-responsive" id="nav">
         (#INCLURE{fond=inclure/nav,env}|navbar_responsive)
       </div>]
-
       <div class="row">
         <div class="content span12 " id="content">
           <INCLURE{fond=content/#ENV{type-page},env} />
         </div>
-      </div>
-
-      <div class="footer" id="footer">
-        <INCLURE{fond=footer/#ENV{type-page},env} />
       </div>
     </div>
   </div>
