@@ -41,7 +41,7 @@ $('video').load(function () {
 
     }
 
-})
+});
       // trigger Masonry as a callback
      /*function( newElements ) {
         // hide new items while they are loading

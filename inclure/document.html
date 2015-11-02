@@ -1,41 +1,65 @@
 <BOUCLE_content(DOCUMENTS){id_document}{tout}>
-
+<div class="thank_you">
+  <img class="feet" src="#CHEMIN{images/feet.png}" alt="feet" />  
+  <header class="cartouche">
+    <h1 class="#EDIT{titre}"><:fourstepsforplanet:share_video_title:></h1>
+  </header>
   <div class="main">
     <p><:fourstepsforplanet:share_video:></p>
+    <p class="hashtag">
+      #Change4Planet.
+    </p>
     <p><:fourstepsforplanet:let_know:></p>
-    <div class="social"> </div>
- </div>
+    <div class="share">
+      <div class="social"> </div>
+      <div class="twitter">
+        <a href="http://twitter.com/intent/tweet?text=[(#VAL{<:fourstepsforplanet:share_video_description_twitter{url=#URL_SITE_SPIP}:>}|urlencode)]&url=[(#URL_SITE_SPIP|url_absolue|urlencode)]"><img src="#CHEMIN{images/twitter.png}" alt="email" /></a>
+      </div>
+      <div class="mail">
+        <a title="<:recommander:recommander:> "class="mediabox" href="[(#URL_PAGE{recommander}|parametre_url{url,#ENV{url}}|parametre_url{titre,#ENV{titre}}|parametre_url{texte,#ENV{introduction}})]">
+          <img src="#CHEMIN{images/email.png}" alt="email" />
+        </a>
+      </div>
+    </div>
+    
 
+     
+ </div>
+</div>
 </BOUCLE_content>
 <BOUCLE_rubrique(RUBRIQUES){id_rubrique=2}{tout}>
-  <div class="inner-content">
-   [<div class="#EDIT{texte} texte">(#TEXTE)</div>]
-   <div class="steps">
-     <div class="step">
-       <img src="#CHEMIN{images/upload_step1.png}" alt="Upload Step 1" />
-       <div>STEP 1<br /> HOLD CAMERA ON TOP</div>
+  <header class="cartouche">
+    <h1 class="#EDIT{titre}">#NOM_SITE_SPIP</h1>
+  </header>
+    <div class="inner-content">
+     [<div class="#EDIT{texte} texte">(#TEXTE)</div>]
+     <div class="steps">
+       <div class="step">
+         <img src="#CHEMIN{images/upload_step1.png}" alt="Upload Step 1" />
+         <div>STEP 1<br /> HOLD CAMERA ON TOP</div>
+       </div>
+       <div class="step">
+         <img src="#CHEMIN{images/upload_step2.png}" alt="Upload Step 2" />
+         <div>STEP 2 <br />TAKE 4 STEPS</div>
+       </div>
+       <div class="step">
+         <img src="#CHEMIN{images/upload_step3.png}" alt="Upload Step 3" />
+         <div>STEP 3 <br />UPOAD</div>
+       </div>   
+       <div class="step">
+         <img src="#CHEMIN{images/upload_step4.png}" alt="Upload Step 4" />
+         <div>STEP 4 <br />SHARE MOVIE + #CHANGE4PLANET</div>
+       </div>        
      </div>
-     <div class="step">
-       <img src="#CHEMIN{images/upload_step2.png}" alt="Upload Step 2" />
-       <div>STEP 2 <br />TAKE 4 STEPS</div>
-     </div>
-     <div class="step">
-       <img src="#CHEMIN{images/upload_step3.png}" alt="Upload Step 3" />
-       <div>STEP 3 <br />UPOAD</div>
-     </div>   
-     <div class="step">
-       <img src="#CHEMIN{images/upload_step4.png}" alt="Upload Step 4" />
-       <div>STEP 4 <br />SHARE MOVIE + #CHANGE4PLANET</div>
-     </div>        
-   </div>
-   
-   <br class="clear" />
-      
-  <div class="button upload">#SET{titre,#INFO_TITRE{rubrique,5}}
-    <span><:fourstepsforplanet:upload_video:></span>
-  </div>
-  <div class="none-js; display:none;">
-    #FORMULAIRE_JOINDRE_DOCUMENT{new,#ID_RUBRIQUE,rubrique,document}
+     
+     <br class="clear" />
+        
+    <div class="button upload">#SET{titre,#INFO_TITRE{rubrique,5}}
+      <span><:fourstepsforplanet:upload_video:></span>
+    </div>
+    <div class="none-js; display:none;">
+      #FORMULAIRE_JOINDRE_DOCUMENT{new,#ID_RUBRIQUE,rubrique,document}
+    </div>
   </div>
 </BOUCLE_rubrique>
 <//B_content>

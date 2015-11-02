@@ -1,0 +1,31 @@
+<BOUCLE_document_head(DOCUMENTS) {id_document}{tout}>
+<title>[(#NOM_SITE_SPIP|textebrut)]</title>
+<meta name="description" content="<:fourstepsforplanet:share_video_meta:>" />
+<!-- Twitter-->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="[(#NOM_SITE_SPIP|textebrut)]">
+<meta name="twitter:description" content="<:fourstepsforplanet:share_video_description_twitter:>">
+<meta name="twitter:site" content="@ChangeandCare" />
+<meta name="twitter:image" content="" />
+<meta property="og:title" content="[(#NOM_SITE_SPIP|textebrut)]" />
+<meta property="og:description" content="<:fourstepsforplanet:share_video_description_og:>" />
+[<meta property="og:url" content="(#URL_SITE_SPIP|url_absolue)" />]
+<meta property="og:site_name" content="#NOM_SITE_SPIP" />
+<meta property="og:type" content="article" />
+[<link rel="canonical" href="(#URL_SITE_SPIP|url_absolue)" />]
+</BOUCLE_document_head>
+
+<BOUCLE_rubrique_head(RUBRIQUES) {id_rubrique}{tout}>
+<title>[(#TITRE|textebrut) - ][(#NOM_SITE_SPIP|textebrut)]</title>
+[<meta name="description" content="(#INTRODUCTION{150}|textebrut)" />]
+[<link rel="canonical" href="(#URL_RUBRIQUE|url_absolue)" />]
+[(#REM) Lien vers le flux RSS de la rubrique ]
+<link rel="alternate" type="application/rss+xml" title="<:syndiquer_rubrique:>" href="[(#URL_PAGE{backend}|parametre_url{id_rubrique,#ID_RUBRIQUE})]" />
+<meta property="og:title" content="#TITRE" />
+[<meta property="og:description" content="(#INTRODUCTION{150}|textebrut)" />]
+[<meta property="og:image" content="(#LOGO_RUBRIQUE|extraire_attribut{src}|url_absolue)" />]
+[<meta property="og:url" content="(#URL_RUBRIQUE|url_absolue)" />]
+<meta property="og:site_name" content="#NOM_SITE_SPIP" />
+<meta property="og:type" content="website"/>
+</BOUCLE_rubrique_head>
+<//B_document_head>

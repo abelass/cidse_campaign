@@ -66,9 +66,6 @@ function fourstepsforplanet_formulaire_traiter($flux) {
   return $flux;
 }
 
-
-
-
 /**
  * Permet d’ajouter des contenus dans la partie <head> d’une page HTML.
  *
@@ -79,8 +76,7 @@ function fourstepsforplanet_formulaire_traiter($flux) {
 function fourstepsforplanet_insert_head($flux){
   
   $flux .= "<script src='" . find_in_path('scripts/masonry.pkgd.min.js') ."' type='text/javascript'></script>\n";
-  /*$flux .= "<script src='" . find_in_path('scripts/jquery.infinitescroll.min.js') ."' type='text/javascript'></script>\n";
-  $flux .= "<script src='" . find_in_path('scripts/imagesloaded.pkgd.min.js') ."' type='text/javascript'></script>\n";*/
+  $flux .= "<script src='" . find_in_path('scripts/imagesloaded.pkgd.min.js') ."' type='text/javascript'></script>\n";
   $flux .= "<script src='" . find_in_path('scripts/masonryInit.js') ."' type='text/javascript'></script>\n";
   
   return $flux;  

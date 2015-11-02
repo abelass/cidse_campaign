@@ -1,12 +1,13 @@
 @import "css/variables.less";
 
+body {color:@navbarInverseText}
+
 /*Titraille*/
 h1,.h1{
   padding: 0 26px;
   background-image:url(images/h1_vert_left.png),url(images/h1_vert_right.png);
   background-repeat:no-repeat;
   background-position:left,right;
-  color:@navbarInverseText;
   font-size:3.8em;
   }
 h1,.h1,h2,.h2,h3,h4{
@@ -20,6 +21,7 @@ header{text-align:center}
 
 .container {
   background-image:url(images/bg_blanc.jpg);
+  background-repeat:repeat-y;
 }
 
 #content{
@@ -136,11 +138,6 @@ header{text-align:center}
     display: none;
 }
 
-/*Social tags*/
-.socialtags img {
-    height: 64px;
-}
-
 /* Home */
 
 /*Masonry*/
@@ -190,7 +187,6 @@ header{text-align:center}
       background-size: 100%;
       margin-top:-5em;
       padding:2em 0 4em 0;
-      color:@green;
       .button{font-size:2.7em}
       .inner{
         background-image:url(images/bg_beige.jpg);
@@ -235,7 +231,7 @@ header{text-align:center}
 .rubrique_upload{
 
   .inner-content{color:@green}
-  .steps{
+  .steps, .hashtag{
     font-family: @headingsFontFamily;
   }
   .step{
@@ -247,12 +243,32 @@ header{text-align:center}
   .button{
     background-image:url(images/button_green_white_left_big.png), url(images/button_green_white_node_big.png), url(images/button_green_white_right_big.png), url(images/button_green_center_big.png);
     font-size:3.18em;
-    color:@green;
     clear:both;
     margin-top: 1em;
   }
   
   label{display:none}
+  
+  .thank_you{
+    background-image:url(images/bg_beige.jpg);
+    background-repeat:repeat-y;
+    padding-bottom: 2em;
+    img.feet{margin-top:3em}
+    p.hashtag{
+      font-size: 2em;
+      font-weight: bold;
+      margin: 0.5em 0;
+    }
+    .share{
+      width:213px;
+      margin: 0 auto;
+      
+      div{display:inline-block;}
+      .socialtags img{
+        height:auto;
+      }
+    }
+  }
 }
 
 @media (min-width: 1200px) {
