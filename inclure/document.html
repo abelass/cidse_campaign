@@ -4,7 +4,7 @@
   <header class="cartouche">
     <h1 class="#EDIT{titre}"><:fourstepsforplanet:share_video_title:></h1>
   </header>
-  <div class="main">
+  <div class="main inner-content">
     <p><:fourstepsforplanet:share_video:></p>
     <p class="hashtag">
       #Change4Planet.
@@ -23,10 +23,19 @@
         </a>
       </div>
     </div>
-    
-
-     
- </div>
+    <p class="action">
+      "TWEET TO YOUR NATIONAL GOVERNMENT REPRESENTATIVES, MINISTERS OR NEGOTIATORS.
+    </p>
+    <p>
+      Let them know why you’re taking four steps for the planet!
+    </p>
+    <div class="got_to">#SET{titre,#INFO_TITRE{rubrique,4}}
+      <a href="#URL_RUBRIQUE{4}" title="#GET{titre}"><img src="#CHEMIN{images/action.png}" alt="action" /></a>
+      <div>
+        <a href="#URL_RUBRIQUE{4}" title="#GET{titre}">Go to #GET{titre}</a>
+      </div>
+   </div>
+  </div>
 </div>
 </BOUCLE_content>
 <BOUCLE_rubrique(RUBRIQUES){id_rubrique=2}{tout}>
