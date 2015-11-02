@@ -16,7 +16,7 @@
   <necessite nom="mediaspip_player" compatibilite="[1.6.3;]" />
   
   <utilise nom="medias" compatibilite="[2.7.66;]" />
-  <utilise nom="bootstrap" compatibilite="[2.1.17;]" />
+  <utilise nom="bootstrap" compatibilite="[2.1.7;]" />
   
   <pipeline nom="formulaire_traiter" inclure="fourstepsforplanet_pipelines.php" />
   <pipeline nom="insert_head" inclure="fourstepsforplanet_pipelines.php" />
