@@ -14,13 +14,18 @@ h1,.h1,h2,.h2,h3,h4{
   display:inline-block;
 }
 
+/* Geénéral */
+
 header{text-align:center}
 
 .container {
   background-image:url(images/bg_blanc.jpg);
 }
 
-#content{text-align: center;}
+#content{
+  text-align: center;
+  margin-top: 63px;
+  }
 .cartouche {
   text-align:center;
   .wrapper{position:relative;}
@@ -35,6 +40,10 @@ header{text-align:center}
 #logo_site_spip {display:none}
 
 .bg_wrapper{position:relative;}
+
+.formulaire_spip,.formulaire_spip .boutons {background-color:transparent}
+
+.formulaire_spip .boutons {border:none}
 
 /*Navigation*/
 
@@ -100,7 +109,7 @@ header{text-align:center}
   background-repeat:no-repeat, no-repeat, no-repeat, repeat-x;
   background-position:left top, center bottom, right top,center top;
   display:inline-block;
-  a{
+  a,span{
     display: block;
     line-height: 1.5em;
     padding: 0 0.8em 0.2em;
@@ -140,12 +149,10 @@ header{text-align:center}
   float:left;
 }
 
-
 .home {
   #content {
     .cartouche {
       padding:398px 0 7em 0;
-      margin-top: 63px;
       display: block !important;
       background-image:url(images/bg_pieds.jpg),url(images/bg_vert.jpg);
       background-position: 0 0, 0 340px;
@@ -223,6 +230,15 @@ header{text-align:center}
   }
 }
 
+/* Page upload */
+
+.rubrique_upload{
+  .button{
+    background-image:url(images/button_green_white_left_big.png), url(images/button_green_white_node_big.png), url(images/button_green_white_right_big.png), url(images/button_green_center_big.png);
+    font-size:3.18em;
+    color:@green;
+  }
+}
 
 @media (min-width: 1200px) {
   .navbar-inner {width:@gridRowWidth1200}

@@ -1,0 +1,20 @@
+<BOUCLE_content(DOCUMENTS){id_document}{tout}>
+
+
+  <div class="main">
+    <p><:fourstepsforplanet:share_video:></p>
+    <p><:fourstepsforplanet:let_know:></p>
+    <div class="social"> </div>
+    <a class="btn btn-primary" href="[(#URL_SITE_SPIP|parametre_url{actualise,#ID_DOCUMENT})]"><:fourstepsforplanet:see_all_videos:></a>
+    </div>
+
+</BOUCLE_content>
+<BOUCLE_rubrique(RUBRIQUES){id_rubrique=2}{tout}>
+  <div class="button upload">#SET{titre,#INFO_TITRE{rubrique,5}}
+    <span><:fourstepsforplanet:upload_video:></span>
+  </div>
+  <div class="none-js; display:none;">
+    #FORMULAIRE_JOINDRE_DOCUMENT{new,#ID_RUBRIQUE,rubrique,document}
+  </div>
+</BOUCLE_rubrique>
+<//B_content>
