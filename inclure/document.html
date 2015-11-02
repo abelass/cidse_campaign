@@ -11,9 +11,11 @@
     </p>
     <p><:fourstepsforplanet:let_know:></p>
     <div class="share">
-      <div class="social"> </div>
+      <div class="facebook">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=[(#SELF|url_absolue|urlencode)]"><img src="#CHEMIN{images/facebook.png}" alt="email" /></a>
+      </div>
       <div class="twitter">
-        <a href="http://twitter.com/intent/tweet?text=[(#VAL{<:fourstepsforplanet:share_video_description_twitter{url=#URL_SITE_SPIP}:>}|urlencode)]&url=[(#URL_SITE_SPIP|url_absolue|urlencode)]"><img src="#CHEMIN{images/twitter.png}" alt="email" /></a>
+        <a href="http://twitter.com/intent/tweet?text=[(#VAL{<:fourstepsforplanet:share_video_description_twitter{url=#URL_SITE_SPIP}:>}|urlencode)]&url=[(#SELF|url_absolue|urlencode)]"><img src="#CHEMIN{images/twitter.png}" alt="email" /></a>
       </div>
       <div class="mail">
         <a title="<:recommander:recommander:> "class="mediabox" href="[(#URL_PAGE{recommander}|parametre_url{url,#ENV{url}}|parametre_url{titre,#ENV{titre}}|parametre_url{texte,#ENV{introduction}})]">
