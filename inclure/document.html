@@ -1,15 +1,36 @@
 <BOUCLE_content(DOCUMENTS){id_document}{tout}>
 
-
   <div class="main">
     <p><:fourstepsforplanet:share_video:></p>
     <p><:fourstepsforplanet:let_know:></p>
     <div class="social"> </div>
-    <a class="btn btn-primary" href="[(#URL_SITE_SPIP|parametre_url{actualise,#ID_DOCUMENT})]"><:fourstepsforplanet:see_all_videos:></a>
-    </div>
+ </div>
 
 </BOUCLE_content>
 <BOUCLE_rubrique(RUBRIQUES){id_rubrique=2}{tout}>
+  <div class="inner-content">
+   [<div class="#EDIT{texte} texte">(#TEXTE)</div>]
+   <div class="steps">
+     <div class="step">
+       <img src="#CHEMIN{images/upload_step1.png}" alt="Upload Step 1" />
+       <div>STEP 1<br /> HOLD CAMERA ON TOP</div>
+     </div>
+     <div class="step">
+       <img src="#CHEMIN{images/upload_step2.png}" alt="Upload Step 2" />
+       <div>STEP 2 <br />TAKE 4 STEPS</div>
+     </div>
+     <div class="step">
+       <img src="#CHEMIN{images/upload_step3.png}" alt="Upload Step 3" />
+       <div>STEP 3 <br />UPOAD</div>
+     </div>   
+     <div class="step">
+       <img src="#CHEMIN{images/upload_step4.png}" alt="Upload Step 4" />
+       <div>STEP 4 <br />SHARE MOVIE + #CHANGE4PLANET</div>
+     </div>        
+   </div>
+   
+   <br class="clear" />
+      
   <div class="button upload">#SET{titre,#INFO_TITRE{rubrique,5}}
     <span><:fourstepsforplanet:upload_video:></span>
   </div>

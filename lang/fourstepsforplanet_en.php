@@ -24,6 +24,9 @@ Click here to join this call to action by the campaign “Change for the planet 
   // T
   'texte_compteur' => 'Already @compteur@ steps',
   // U
+  
+  'upload_erreur_extension' => 'Only videos in the formats @extensions@ are accepted.', 
+  'upload_erreur_size' => 'Only videos not bigger than @size@ M are accepted.',   
   'upload_video' => 'Upload your video',
   
   // W
