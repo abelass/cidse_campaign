@@ -1,6 +1,6 @@
 <BOUCLE_content(DOCUMENTS){id_document}{tout}>
 <div class="thank_you">
-  <img class="feet" src="#CHEMIN{images/feet.png}" alt="feet" />  
+  <img class="feet" src="#CHEMIN{images/feet.png}" alt="feet" />
   <header class="cartouche">
     <h1 class="#EDIT{titre}"><:fourstepsforplanet:share_video_title:></h1>
   </header>
@@ -56,21 +56,30 @@
        <div class="step">
          <img src="#CHEMIN{images/upload_step3.png}" alt="Upload Step 3" />
          <div>STEP 3 <br />UPOAD</div>
-       </div>   
+       </div>
        <div class="step">
          <img src="#CHEMIN{images/upload_step4.png}" alt="Upload Step 4" />
          <div>STEP 4 <br />SHARE MOVIE + #CHANGE4PLANET</div>
-       </div>        
+       </div>
      </div>
-     
+
      <br class="clear" />
-        
+
     <div class="button upload">#SET{titre,#INFO_TITRE{rubrique,5}}
       <span><:fourstepsforplanet:upload_video:></span>
     </div>
     <div class="none-js; display:none;">
       #FORMULAIRE_JOINDRE_DOCUMENT{new,#ID_RUBRIQUE,rubrique,document}
     </div>
+  <div class="circle counter">
+    <:fourstepsforplanet:texte_compteur{compteur=#GET{compteur}}:>
+  </div>
+  <div class="teaser">
+    <BOUCLE_documents_joints(DOCUMENTS) {id_rubrique} {extension = mp4} {tout}>
+    #MODELE{emb,id_document=#ID_DOCUMENT,largeur=#ENV{largeur,320},autoplay=oui})
+    </BOUCLE_documents_joints>
+  </div>
+</B_documents_joints>
   </div>
 </BOUCLE_rubrique>
 <//B_content>
