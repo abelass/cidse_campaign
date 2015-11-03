@@ -1,76 +1,52 @@
 <BOUCLE_content(RUBRIQUES){id_rubrique}{tout}>
 <section>
-    <header class="cartouche inner-content">
-      <INCLURE{fond=inclure/counter,id_rubrique}/>
-      <div class="#EDIT{descriptif} descriptif">
-        #DESCRIPTIF
-      </div>
-      <h1>Let’s get loud!</h1>
-      [<div class="#EDIT{texte} texte inner-content">(#TEXTE)</div>]
-    </header>
+  <header class="cartouche inner-content">
+    <h1>#NOM_SITE_SPIP</h1>
+  </header>
+  <div class="inner-content">
+    <div class="wrapper">
+      #LOGO_RUBRIQUE_NORMAL
+      <div class="#EDIT{descriptif} descriptif">#DESCRIPTIF</div>
+    </div>
     
-    <div class="tweets">
-      <h2 class="h1">Suggested Tweet</h2>
-      
-      <p>We need your support in generating pressure on governments and negotiators to generate a global, fair, concrete, binding, accountable and transformative agreement in Paris</p>
-      <p>
-        Use the sample tweets and Facebook as inspiration to raise your concerns to government and negotiators for a serious commitment and action to tackle climate change. Invite your friends, colleagues and familly members to do the same.
-      </p>
-      <div class"wrapper">
-        <div class="left">
-          <div class="item">
-            <p>
-              @EUEnvironment only urgent and transformative change will suffice to tackle climate change. Will you commit to the challenge? <strong>#Change4Planet</strong> 
-            </p>
-          </div>
-          <div class="item">
-            <p>
-              @POTUS we want a global, fair, binding and transformative agreement at #COP21. Will you commit to the challenge? <strong>#Change4Planet</strong> 
-            </p>
-          </div>
-          <div class="item">
-            <p>
-              @fhollande will you commit to the decarbonisation of France to secure a safe, fair and clean future at #COP21? <strong>#Change4Planet</strong> 
-            </p>
-          </div>
-          <div class="item">
-            <p>
-              We need strong commitments that will ensure social and environmental justice for all at #COP21 @David_Cameron <strong>#Change4Planet</strong>
-            </p>
-          </div>
-        </div>
-        <div class="right">
-          <div class="item">
-            <p>
-              We want system change to prevent further climate change! RT if you do too <strong>#Change4Planet</strong> 
-            </p>
-          </div>
-          <div class="item">
-            <p>
-              Will you address the ecological debt owed to present and future generations @fhollande @POTUS @David_Cameron? <strong>#Change4Planet</strong> 
-            </p>
-          </div>
-          <div class="item">
-            <p>
-              People around the world are developing solutions that work! Will you listen to us? <strong>#Change4Planet</strong> 
-            </p>
-          </div>
-          <div class="item">
-            <p>
-              Let’s keep temperatures  well below 1.5°C! @UNFCCC <strong>#Change4Planet</strong> 
-            </p>
-          </div>
-        </div>
-
+    <h2 class="h1">We walk for the planet</h1>
+    <div class="wrapper">
+    <BOUCLE_mots(MOTS){id_rubrique}{par num titre}>
+      #LOGO_MOT
+      <div class="content">
+        <h3>#TITRE**</h3>
+        [<div class="#EDIT{texte} texte"> (#TEXTE)</div>]
       </div>
-
+    </BOUCLE_mots>
     </div>
-    <div class="images">
-      <h2 class="h1"><:fourstepsforplanet:walk_us:></h2>
+  </div>    
+  <div class="change bg_wrapper">
+    <div class="inner">
       <div class="inner-content">
-        
+        <h2 class="h1">Change for the Planet – Care for the People</h1>
+        <div class="wrapper">
+          #LOGO_RUBRIQUE_SURVOL        
+          [<div class="#EDIT{texte} texte">
+            (#TEXTE)
+          </div>]
+        </div>
+        <div class="button">
+          <a href="http://www.cidse.org/rethinking-development/change-for-the-planet-care-for-the-people.html">Learn More</a>
+        </div>
       </div>
-      
     </div>
-
+  </div>
+  <div class="lifestyle">
+    <h2 class="h1">Lifestyle Challenges</h1>
+    <div class="wrapper inner-content">
+      <BOUCLE_docs(DOCUMENTS){id_rubrique}{extension=png}>
+        <img class="left" src="#URL_DOCUMENT" alt="lifestyle"/>
+      </BOUCLE_docs>
+    </div>
+    <br class="clear" />
+    <div class="button">
+      <a href="http://www.cidse.org/rethinking-development/change-for-the-planet-care-for-the-people.html">Learn More</a>
+    </div>
+  </div>
+</section>
 </BOUCLE_content>

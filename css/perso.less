@@ -14,6 +14,7 @@ h1,.h1,h2,.h2,h3,h4{
   text-align:center;
   display:inline-block;
 }
+h3 {margin-bottom: 0;}
 
 /* Geénéral */
 
@@ -289,9 +290,6 @@ header{text-align:center}
 /*Page Act4Planet*/
 
 .rubrique_act{
-  #content{
-
-  }
   .cartouche{
     font-family: @headingsFontFamily;
     font-weight:bold;
@@ -344,6 +342,44 @@ header{text-align:center}
   }
 }
 
+.rubrique_about{
+  .inner-content{
+    clear:both;
+    width:74%;
+    text-align:justified;
+    .wrapper {
+      > div{
+        margin-left:15%;
+        text-align:justify}
+      img {float:left}
+    }
+  }
+  .button {
+    clear:both;
+    font-size: 2.62em;
+    margin: 1em 0;
+    }
+  .change{
+    background-image:url(images/bg_beige_top.png),url(images/bg_beige_bottom.png);
+    background-position: left top, left bottom;
+    background-repeat:no-repeat, no-repeat;
+    background-size: 100%;
+    margin-top:5em;
+    padding:4em 0 2em 0;
+    .inner{
+      background-image:url(images/bg_beige.jpg);
+      background-position: left top;
+      background-repeat:repeat-y;
+      background-size: 100%;
+    }
+  }
+  .lifestyle {
+    .inner-content{width:61%}
+    img {
+      margin: 0 1em 1em 2em;
+    }
+  }
+}
 @media (min-width: 1200px) {
   .navbar-inner {width:@gridRowWidth1200}
   .home {
