@@ -146,7 +146,7 @@ header{text-align:center}
 .home {
   #content {
     .cartouche {
-      padding:398px 0 7em 0;
+      padding: 315px 0 7em;
       display: block !important;
       background-image:url(images/bg_pieds.jpg),url(images/bg_vert.jpg);
       background-position: 0 0, 0 340px;
@@ -385,6 +385,7 @@ header{text-align:center}
   .home {
     #content {
       .cartouche {
+        padding:398px 0 7em 0;
         .counter{
           right: 56px;
           top: 286px;
@@ -405,9 +406,106 @@ header{text-align:center}
 }
 
 @media (max-width: 979px) and (min-width: 768px) {
+  h1 {margin-bottom: 0;} 
+  p {margin-bottom: 0;}
+  header.cartouche {
+      padding: 240px 0 7em!important;
+  }
+  .counter{
+    font-size: 1.6em;
+    max-width: 46px;
+    padding: 1.2em;
+    }
   .navbar-inner {width:@gridRowWidth768}
+  .home .about{
+    padding: 1em 0 3em;
+   .items{width:100%;}
+   .item p{padding: .5em 0.5em;}
+    }
+    
+  .home .walk .button {
+      background-image: url(images/button_green_white_left.png),url(images/button_green_node.png),url(images/button_green_white_right.png),url(images/button_green_center.png);
+      font-size: 2.18em;
+  a, span {
+        display: block;
+        line-height: 1.9em;
+        padding: 0 .8em .2em;
+    }
+  }
 }
 
 @media (max-width: 767px){
-  .navbar-inner {width:100%}
+  body {font-size:75%}
+  .navbar-inner {
+    width:100%;
+    position: relative;
+    }
+    
+  .navbar-responsive {
+    right: 0;
+  }
+  .navbar-inverse .btn-navbar{
+    background-color:@navbarInverseText;
+  }
+  
+  .home #content .cartouche h1, h1, .h1 {
+      background-image: none !important;
+      font-size:2em;
+  }
+
+  header.cartouche {
+      padding: 31% 0 7em!important;
+  }
+
+  
+  .button {
+    background-image:none !important;
+    border:2px solid @navbarInverseText;
+    font-size:2em !important;
+  }
+  .cartouche .button.about_this{border:2px solid #ffffff;}
+  .home .about .button,.home .walk .button,.home #content .cartouche .button {
+    background-image:none;
+    font-size:2em;
+}
+  
+  .home .walk .button {
+      font-size: 2.18em;
+  a, span {
+        display: block;
+        line-height: 1.5em;
+       padding: 0 .8em 0.2em!important;
+    }
+  }
+  
+  .home .about{
+
+    padding: 2em 0 2.5em 0;
+   .items{
+     width:100%;
+     font-size:1.3em;
+     }
+     p{
+        padding: 0;
+     }
+    .item {
+        width: 23%;
+        margin-right: 0; 
+     }
+   }
+   
+  .home #content .cartouche .spip_logos {
+    position:relative;
+    right:0;
+  }
+  .counter,.home #content .cartouche .counter {
+     position: relative;
+    font-size: 1.2em;
+    max-width: 27px;
+    padding: 1.5em;
+    right:0;
+    top:0;
+  }
+  
+  .inner-content {width:80%;}
 }
