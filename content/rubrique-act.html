@@ -7,10 +7,10 @@
         <h1>Let’s get loud!</h1>
         [<div class="#EDIT{texte} texte">(#TEXTE)</div>]
     </header>
-    
+
     <div class="tweets">
         <h2 class="h1">Suggested Tweet</h2>
-        
+
         <p>We need your support in generating pressure on governments and negotiators to generate a global, fair, concrete, binding, accountable and transformative agreement in Paris</p>
         <p>
           Use the sample tweets and Facebook as inspiration to raise your concerns to government and negotiators for a serious commitment and action to tackle climate change. Invite your friends, colleagues and familly members to do the same.
@@ -19,17 +19,17 @@
           <div class="left">
             <div class="item">
               <p>
-                @EUEnvironment only urgent and transformative change will suffice to tackle climate change. Will you commit to the challenge? <strong>#Change4Planet</strong> 
+                @EUEnvironment only urgent and transformative change will suffice to tackle climate change. Will you commit to the challenge? <strong>#Change4Planet</strong>
               </p>
             </div>
             <div class="item">
               <p>
-                @POTUS we want a global, fair, binding and transformative agreement at #COP21. Will you commit to the challenge? <strong>#Change4Planet</strong> 
+                @POTUS we want a global, fair, binding and transformative agreement at #COP21. Will you commit to the challenge? <strong>#Change4Planet</strong>
               </p>
             </div>
             <div class="item">
               <p>
-                @fhollande will you commit to the decarbonisation of France to secure a safe, fair and clean future at #COP21? <strong>#Change4Planet</strong> 
+                @fhollande will you commit to the decarbonisation of France to secure a safe, fair and clean future at #COP21? <strong>#Change4Planet</strong>
               </p>
             </div>
             <div class="item">
@@ -41,22 +41,22 @@
           <div class="right">
             <div class="item">
               <p>
-                We want system change to prevent further climate change! RT if you do too <strong>#Change4Planet</strong> 
+                We want system change to prevent further climate change! RT if you do too <strong>#Change4Planet</strong>
               </p>
             </div>
             <div class="item">
               <p>
-                Will you address the ecological debt owed to present and future generations @fhollande @POTUS @David_Cameron? <strong>#Change4Planet</strong> 
+                Will you address the ecological debt owed to present and future generations @fhollande @POTUS @David_Cameron? <strong>#Change4Planet</strong>
               </p>
             </div>
             <div class="item">
               <p>
-                People around the world are developing solutions that work! Will you listen to us? <strong>#Change4Planet</strong> 
+                People around the world are developing solutions that work! Will you listen to us? <strong>#Change4Planet</strong>
               </p>
             </div>
             <div class="item">
               <p>
-                Let’s keep temperatures  well below 1.5°C! @UNFCCC <strong>#Change4Planet</strong> 
+                Let’s keep temperatures  well below 1.5°C! @UNFCCC <strong>#Change4Planet</strong>
               </p>
             </div>
           </div>
@@ -72,7 +72,9 @@
           <BOUCLE_docs(DOCUMENTS){id_rubrique}{tout}{extension IN png,jpg,gif}>
           <div class="item">
             <a href="#URL_DOCUMENT">
-              [(#URL_DOCUMENT|image_reduire{222})]
+              [(#URL_DOCUMENT
+              |image_passe_partout{222,155}
+              |image_recadre{222,155})]
             </a>
           </div>
           </BOUCLE_docs>
@@ -92,8 +94,8 @@
           !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
           </script>
       </div>
-                  
-          
-      
+
+
+
     </div>
 </BOUCLE_content>
