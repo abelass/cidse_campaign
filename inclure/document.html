@@ -62,23 +62,20 @@
          <div>STEP 4 <br />SHARE MOVIE + #CHANGE4PLANET</div>
        </div>
      </div>
-
      <br class="clear" />
-
     <div class="button upload">#SET{titre,#INFO_TITRE{rubrique,5}}
       <span><:fourstepsforplanet:upload_video:></span>
     </div>
+    <B_documents_joints>
+    <div class="teaser">
+      <BOUCLE_documents_joints(DOCUMENTS) {id_rubrique = #ENV{id_rubrique}} {extension = mp4} {tout}>
+        #MODELE{emb,id_document=#ID_DOCUMENT,largeur=#ENV{largeur,320},autoplay=oui}
+        </BOUCLE_documents_joints>
+    </div>
+    </B_documents_joints>
     <div class="none-js; display:none;">
       #FORMULAIRE_JOINDRE_DOCUMENT{new,#ID_RUBRIQUE,rubrique,document}
     </div>
-
-  <B_documents_joints>
-    <div class="teaser">
-    <BOUCLE_documents_joints(DOCUMENTS) {id_rubrique = #ENV{id_rubrique}} {extension = mp4} {tout}>
-        #MODELE{emb,id_document=#ID_DOCUMENT,largeur=#ENV{largeur,320},autoplay=oui}
-      </BOUCLE_documents_joints>
-    </div>
-  </B_documents_joints>
   </div>
 </BOUCLE_rubrique>
 <//B_content>
