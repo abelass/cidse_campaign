@@ -204,7 +204,7 @@ header{text-align:center}
       background-position: left top, left bottom;
       background-repeat:no-repeat, no-repeat;
       background-size: 100%;
-      margin-top:-5em;
+      margin-top:-3em;
       padding:2em 0 4em 0;
       .button{font-size:2.7em}
       .inner{
@@ -217,12 +217,12 @@ header{text-align:center}
       width:25%;
       display:inline-block;
       margin-right:-1.6em;
-      p {padding:0.5em 1em 0.5em;}
+      p {padding:0.5em 0.8em 0.5em;}
       }
     .items {
       margin: 0.5em auto 1em;
       width: 790px;
-      font-size:1.6em;
+      font-size:1.3em;
     }
   }
   .walk{
@@ -235,7 +235,12 @@ header{text-align:center}
       right:1%;
       top:1.3em;
       background-image:url(images/button_green_white_left_big.png), url(images/button_green_white_node_big.png), url(images/button_green_white_right_big.png), url(images/button_green_center_big.png);
-      font-size:3.18em;
+      font-size:2em;
+      a {
+        padding-top: 0.6em;
+        line-height: 1.4em;
+        padding-bottom: 0.7em;
+      }
     }
     .counter {
       left: 9%;
@@ -408,7 +413,7 @@ header{text-align:center}
   .home {
     #content {
       .cartouche {
-        padding:398px 0 7em 0;
+        padding:398px 0 5em 0;
         .counter{
           right: 56px;
           top: 286px;
@@ -435,7 +440,7 @@ header{text-align:center}
       padding: 240px 0 7em!important;
   }
   .counter{
-    font-size: 1.6em;
+    font-size: 1.4em;
     max-width: 46px;
     padding: 1.2em;
     }
@@ -448,11 +453,11 @@ header{text-align:center}
 
   .home .walk .button {
       background-image: url(images/button_green_white_left.png),url(images/button_green_node.png),url(images/button_green_white_right.png),url(images/button_green_center.png);
-      font-size: 2.18em;
+      font-size: 1.8em;
   a, span {
         display: block;
         line-height: 1.9em;
-        padding: 0 .8em .2em;
+        padding: 0 .8em 0.6em;
     }
   }
 }
@@ -473,11 +478,18 @@ header{text-align:center}
 
   .home #content .cartouche h1, h1, .h1 {
       background-image: none !important;
-      font-size:2em;
+      font-size:3.5em;
+      width: 100%;
+      padding:0;
   }
 
   header.cartouche {
       padding: 31% 0 7em!important;
+      margin-bottom: 0.1em;
+      .spip_logos{
+        margin: 15px auto 0 auto;
+        display:block;
+        }
   }
 
 
@@ -492,21 +504,28 @@ header{text-align:center}
     font-size:2em;
 }
 
-  .home .walk .button {
+  .home .walk {
+    h2.h1 {margin: 0.3em 0;}
+    .button {
       font-size: 2.18em;
+      position:static;
+      margin-bottom:1em;
   a, span {
         display: block;
         line-height: 1.5em;
        padding: 0 .8em 0.2em!important;
+      }
     }
+    .counter{display:none}
+    .grid-item{width: 100%;}
   }
 
   .home .about{
-
-    padding: 2em 0 2.5em 0;
+    padding: 0.5em 0 1.5em;
+    .inner {padding: 1em;}
    .items{
      width:100%;
-     font-size:1.3em;
+     font-size:1em;
      }
      p{
         padding: 0;
