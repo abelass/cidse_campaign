@@ -53,6 +53,9 @@ h1,.h1{
   font-transform:uppercase;
   text-align:center;
   }
+h1, .h1, .h1-like {
+    margin-bottom: 0em;
+}
 h1,.h1,h2,.h2,h3,h4{
   display:inline-block;
 }
@@ -393,7 +396,7 @@ header{text-align:center}
     background-repeat:no-repeat, no-repeat;
     background-size: 100%;
     margin-top:5em;
-    padding:4em 0 2em 0;
+    padding:3em 0 2em 0;
     .inner{
       background-image:url(images/bg_beige.jpg);
       background-position: left top;
@@ -436,7 +439,8 @@ header{text-align:center}
 @media (max-width: 979px) and (min-width: 768px) {
   h1 {margin-bottom: 0;}
   p {margin-bottom: 0;}
-  header.cartouche {
+  header {padding-top:2em;}
+  .home header.cartouche {
       padding: 240px 0 7em!important;
   }
   .counter{
@@ -504,7 +508,8 @@ header{text-align:center}
     font-size:2em;
 }
 
-  .home .walk {
+  .home {
+    .walk {
     h2.h1 {margin: 0.3em 0;}
     .button {
       font-size: 2.18em;
@@ -518,9 +523,8 @@ header{text-align:center}
     }
     .counter{display:none}
     .grid-item{width: 100%;}
-  }
-
-  .home .about{
+    }
+      .about{
     padding: 0.5em 0 1.5em;
     .inner {padding: 1em;}
    .items{
@@ -534,12 +538,13 @@ header{text-align:center}
         width: 23%;
         margin-right: 0;
      }
-   }
-
-  .home #content .cartouche .spip_logos {
+    }
+  #content .cartouche .spip_logos {
     position:relative;
     right:0;
+    }
   }
+
   .counter,.home #content .cartouche .counter {
      position: relative;
     font-size: 1.2em;
@@ -550,4 +555,31 @@ header{text-align:center}
   }
 
   .inner-content {width:80%;}
+  
+  .rubrique_about {
+    .inner-content {
+      .wrapper {
+        img {
+          margin-right: 0.5em;
+          }
+        img.spip_logos{
+          float:none;
+          margin:1em 0;
+          }
+        > div {margin-left: 0;}
+      }
+    }
+    .change{padding: 1.2em 0 1.2em;}
+    .lifestyle {
+      .inner-content {width: 100%;}
+      img{margin: 0 0.1em 0.1em 0.1em}
+    }
+  }
+  .rubrique_act {
+    header.inner-content{margin-top:5em}
+    .tweets .wrapper > div {
+    width: 100%;
+    }
+  .images{padding: 1em 0 1em;}
+  }
 }
