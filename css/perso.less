@@ -2,6 +2,43 @@
 
 body {color:@navbarInverseText}
 
+.fontFace () {
+  font-family: @headingsFontFamily;
+  text-transform:uppercase;
+  text-align:center;
+}
+
+.Button(green,@size){
+  background-image:url(images/button_green_beige_left.png), url(images/button_green_node.png), url(images/button_green_beige_right.png), url(images/button_green_center.png);
+}
+
+.Button(@_,@size){
+  .fontFace();
+  font-size:@size;
+  background-repeat:no-repeat, no-repeat, no-repeat, repeat-x;
+  background-position:left top, center bottom, right top,center top;
+  display:inline-block;
+  a,span{
+    display: block;
+    line-height: 1.5em;
+    padding: 0 0.8em 0.2em;
+  }
+}
+
+
+.Counter(@size : 2em, @maxWidth :58px, @padding : 1.6em){
+  .fontFace();
+  font-size:@size;
+  background-image:url(images/cercle_blanc.png);
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size: 100%;
+  display: inline-block;
+  line-height: 1em;
+  max-width: @maxWidth;
+  padding: @padding;
+}
+
 /*Titraille*/
 h1,.h1{
   padding: 0 26px;
@@ -9,9 +46,10 @@ h1,.h1{
   background-repeat:no-repeat;
   background-position:left,right;
   font-size:3.8em;
+  font-transform:uppercase;
+  text-align:center;
   }
 h1,.h1,h2,.h2,h3,h4{
-  text-align:center;
   display:inline-block;
 }
 h3 {margin-bottom: 0;}
@@ -73,9 +111,8 @@ header{text-align:center}
   padding-bottom:1em;
 
   ul.nav{
-    font-family: @headingsFontFamily;
-    font-size: 2em;
-    text-align:center;
+    .fontFace();
+    font-size:2em;
     float:none;}
   li {
     line-height: normal;
@@ -107,32 +144,13 @@ header{text-align:center}
 /* buttons */
 
 .button{
-  font-family: @headingsFontFamily;
-  font-size: 3em;
-  background-image:url(images/button_green_beige_left.png), url(images/button_green_node.png), url(images/button_green_beige_right.png), url(images/button_green_center.png);
-  background-repeat:no-repeat, no-repeat, no-repeat, repeat-x;
-  background-position:left top, center bottom, right top,center top;
-  display:inline-block;
-  a,span{
-    display: block;
-    line-height: 1.5em;
-    padding: 0 0.8em 0.2em;
-  }
+  .Button(green,3em);
 }
 
 /* Counter*/
 
 .counter{
-  font-family: @headingsFontFamily;
-  background-image:url(images/cercle_blanc.png);
-  background-repeat:no-repeat;
-  background-position:center;
-  background-size: 100%;
-  display: inline-block;
-  font-size: 2em;
-  line-height: 1em;
-  max-width: 58px;
-  padding: 1.6em;
+  .Counter(2em,58px,1.6em);
   }
 
 /*Form upload*/
@@ -177,7 +195,7 @@ header{text-align:center}
     }
   }
   .about{
-      font-family: @headingsFontFamily;
+      .fontFace();
       background-image:url(images/bg_beige_top.png),url(images/bg_beige_bottom.png);
       background-position: left top, left bottom;
       background-repeat:no-repeat, no-repeat;
@@ -235,7 +253,7 @@ header{text-align:center}
 .rubrique_upload{
   .inner-content{color:@navbarInverseText}
   .steps, .hashtag,.action{
-    font-family: @headingsFontFamily;
+    .fontFace();
   }
   .step{
     width:25%;
@@ -291,7 +309,7 @@ header{text-align:center}
 
 .rubrique_act{
   .cartouche{
-    font-family: @headingsFontFamily;
+    .fontFace();
     font-weight:bold;
     div{
       font-size:2em;
@@ -406,7 +424,7 @@ header{text-align:center}
 }
 
 @media (max-width: 979px) and (min-width: 768px) {
-  h1 {margin-bottom: 0;} 
+  h1 {margin-bottom: 0;}
   p {margin-bottom: 0;}
   header.cartouche {
       padding: 240px 0 7em!important;
@@ -422,7 +440,7 @@ header{text-align:center}
    .items{width:100%;}
    .item p{padding: .5em 0.5em;}
     }
-    
+
   .home .walk .button {
       background-image: url(images/button_green_white_left.png),url(images/button_green_node.png),url(images/button_green_white_right.png),url(images/button_green_center.png);
       font-size: 2.18em;
@@ -440,14 +458,14 @@ header{text-align:center}
     width:100%;
     position: relative;
     }
-    
+
   .navbar-responsive {
     right: 0;
   }
   .navbar-inverse .btn-navbar{
     background-color:@navbarInverseText;
   }
-  
+
   .home #content .cartouche h1, h1, .h1 {
       background-image: none !important;
       font-size:2em;
@@ -457,7 +475,7 @@ header{text-align:center}
       padding: 31% 0 7em!important;
   }
 
-  
+
   .button {
     background-image:none !important;
     border:2px solid @navbarInverseText;
@@ -468,7 +486,7 @@ header{text-align:center}
     background-image:none;
     font-size:2em;
 }
-  
+
   .home .walk .button {
       font-size: 2.18em;
   a, span {
@@ -477,7 +495,7 @@ header{text-align:center}
        padding: 0 .8em 0.2em!important;
     }
   }
-  
+
   .home .about{
 
     padding: 2em 0 2.5em 0;
@@ -490,10 +508,10 @@ header{text-align:center}
      }
     .item {
         width: 23%;
-        margin-right: 0; 
+        margin-right: 0;
      }
    }
-   
+
   .home #content .cartouche .spip_logos {
     position:relative;
     right:0;
@@ -506,6 +524,6 @@ header{text-align:center}
     right:0;
     top:0;
   }
-  
+
   .inner-content {width:80%;}
 }
