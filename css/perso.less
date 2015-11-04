@@ -2,10 +2,14 @@
 
 body {color:@navbarInverseText}
 
-.fontFace () {
+.fontFace() {
   font-family: @headingsFontFamily;
   text-transform:uppercase;
   text-align:center;
+}
+
+.fontFace(@font-size) {
+  font-size : @font-size;
 }
 
 .Button(green,@size){
