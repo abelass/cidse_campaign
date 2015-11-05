@@ -29,6 +29,14 @@ body {color:@navbarInverseText}
   }
 }
 
+.pinkBackground(@padding,@url1){
+  background-image: @url1;
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  padding:@padding;
+}
+
 .pinkBackground(@padding,@url1, @url2){
   background-image: @url1, @url2;
   background-position: left top, left bottom;
@@ -174,10 +182,6 @@ header{text-align:center}
   .Counter(2em,58px,1.6em);
   }
 
-/*Form upload*/
-#joindre_distant__new, #joindre_mediatheque__new, .sourceup, .formulaire_joindre_document h3.titrem {
-    display: none;
-}
 
 /* Home */
 
@@ -276,7 +280,18 @@ header{text-align:center}
 
 /* Page upload */
 
+/*Form upload*/
+#joindre_distant__new, #joindre_mediatheque__new, .sourceup, .formulaire_joindre_document h3.titrem {
+    display: none;
+}
+
 .rubrique_upload{
+  section{
+    background-image: url("images/bg_beige.jpg");
+    background-position: left top;
+    background-repeat: repeat-y;
+    background-size: 100% auto;
+  }
   .inner-content{color:@navbarInverseText}
   .steps, .hashtag,.action{
     .fontFace();
