@@ -1,20 +1,24 @@
 <BOUCLE_content(RUBRIQUES){id_rubrique}{tout}>
 <section>
-    <header class="cartouche inner-content">
-        <div class="#EDIT{descriptif} descriptif">
-          #DESCRIPTIF
-        </div>
-        <h1>Let’s get loud!</h1>
-        [<div class="#EDIT{texte} texte">(#TEXTE)</div>]
-    </header>
-
+  <div class="bg_wrapper">
+    <div class="inner">
+      <header class="cartouche inner-content">
+          <div class="#EDIT{descriptif} descriptif">
+            #DESCRIPTIF
+          </div>
+          <h1>Let’s get loud!</h1>
+          [<div class="#EDIT{texte} texte">(#TEXTE)</div>]
+      </header>
+    </div>
+  </div>  
     <div class="tweets">
-        <h2 class="h1">Suggested Tweet</h2>
-
-        <p>We need your support in generating pressure on governments and negotiators to generate a global, fair, concrete, binding, accountable and transformative agreement in Paris</p>
+      <h2 class="h1">Suggested Tweets</h2>
+      <div class="inner-content">
+         <p>We need your support in generating pressure on governments and negotiators to generate a global, fair, concrete, binding, accountable and transformative agreement in Paris</p>
         <p>
           Use the sample tweets and Facebook as inspiration to raise your concerns to government and negotiators for a serious commitment and action to tackle climate change. Invite your friends, colleagues and familly members to do the same.
         </p>
+      </div>
         <div class="wrapper">
           <div class="left">
             <div class="item">
@@ -66,15 +70,14 @@
     <div class="images">
       <div class="inner">
         <h2 class="h1">Suggested images</h2>
-        <p>It is often said that images speak more than words. Use these sample images for your facebook or tw</p>
+        <p>It is often said that images speak more than words. Use these images on facebook!</p>
         <B_docs>
         <div class="liste_images">
           <BOUCLE_docs(DOCUMENTS){id_rubrique}{tout}{extension IN png,jpg,gif}>
           <div class="item">
             <a href="#URL_DOCUMENT">
               [(#URL_DOCUMENT
-              |image_passe_partout{222,155}
-              |image_recadre{222,155})]
+              |image_reduire{222,155})]
             </a>
           </div>
           </BOUCLE_docs>
