@@ -20,10 +20,10 @@ if (!defined('_ECRIRE_INC_VERSION'))
  */
 function inc_fsp_definitions_dist($type = 'video_extensions') {
   $definitions = array(
-    'video_extensions' => array('mp4','webm'),
+    'video_extensions' => array('mp4', 'webm', '3ggp', 'mov'),
     'video_upload_max_poids' => 8000000 //poids en bytes
     );
-  
+
   if (!$type) return $definitions;
   else return $definitions[$type];
 }
