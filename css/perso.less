@@ -34,7 +34,7 @@
   background-size: 100% auto;
 
 }
-.pinkBackground(@padding: 0 0 2em, @url1:"images/bg_beige.png"){
+.pinkBackground(@padding: 0 0 2em, @url1:"images/bg_beige.jpg"){
   background-image: url(@url1), url("images/bg_beige_bottom.png");
   background-position: left top, left bottom;
   background-repeat: no-repeat, no-repeat;
@@ -61,7 +61,6 @@
 body {
   color:@navbarInverseText;
   background-image:url(images/bg_blanc.jpg);
-  //background-repeat:repeat-y;
   }
 
 /*Titraille*/
@@ -87,13 +86,11 @@ h3 {margin-bottom: 0;}
 
 header{text-align:center}
 
-.container {
-
-}
 
 #content{
   text-align: center;
   margin-top: 30px;
+  background-image:url(images/bg_blanc.jpg);
   }
 .cartouche {
   text-align:center;
@@ -129,6 +126,7 @@ header{text-align:center}
 }
 .navbar-inner {
   position: fixed;
+  top:0;
   width: @gridRowWidth;
   z-index: 200;
   border: none;
@@ -244,10 +242,10 @@ header{text-align:center}
     }
   }
   .walk{
+    position:relative;
     h2.h1{margin:1em 0;}
     .counter,.button{
       position:absolute;
-      top:0;
     }
     .button{
       right:1%;
@@ -264,6 +262,7 @@ header{text-align:center}
       left: 9%;
       color:@navbarInverseText;
       background-image:url(images/cercle_vert.png);
+      top:0;
       }
     /*Masonry*/
     #grid{margin: 0 2em;}
@@ -448,29 +447,41 @@ header{text-align:center}
   h1 {margin-bottom: 0;}
   p {margin-bottom: 0;}
   header {padding-top:2em;}
-  .home header.cartouche {
-      padding: 240px 0 7em!important;
-  }
   .counter{
     font-size: 1.4em;
     max-width: 46px;
     padding: 1.2em;
     }
   .navbar-inner {width:@gridRowWidth768}
-  .home .about{
-    padding: 1em 0 3em;
-   .items{width:100%;}
-   .item p{padding: .5em 0.5em;}
+  .home {
+    header.cartouche {
+      padding: 240px 0 7em!important;
+     }
+      .bg_wrapper.about{padding: 1em 0;}
+    .about{
+      padding: 1em 0 3em;
+     .items{width:100%;}
+     .item p{padding: .5em 0.5em;}
     }
-
-  .home .walk .button {
+    .walk .button {
       background-image: url(images/button_green_white_left.png),url(images/button_green_node.png),url(images/button_green_white_right.png),url(images/button_green_center.png);
       font-size: 1.8em;
-  a, span {
+      a, span {
         display: block;
         line-height: 1.9em;
         padding: 0 .8em 0.6em;
+      }
     }
+  }
+  .rubrique_about {
+    .inner-content{
+      padding-bottom:1em;
+      .wrapper > div{
+         margin-top: 1em;
+         margin-left: 20%;
+         }
+    }
+
   }
 }
 
@@ -494,15 +505,26 @@ header{text-align:center}
       width: 100%;
       padding:0;
   }
-  header{margin-top:3em;}
-  .home header.cartouche {
-      padding: 31% 0 7em!important;
-      margin-bottom: 0.1em;
-      .spip_logos{
-        margin: 15px auto 0 auto;
-        display:block;
-        }
+  header{
+    margin-top:3em;
+    padding-top: 1em;
+    }
+  
+  .bg_wrapper{padding: 0 !important;}
+  .home {
+    header.cartouche {
+    padding: 31% 0 7em!important;
+    margin-bottom: 0.1em;
+    .spip_logos{
+      margin: 15px auto 0 auto;
+      display:block;
+      }
+    }
+    .bg_wrapper.about .inner {
+    padding: 1em 0 2em;
+}
   }
+
 
 
   .button {
