@@ -1,7 +1,5 @@
 @import "css/variables.less";
 
-body {color:@navbarInverseText}
-
 .fontFace() {
   font-family: @headingsFontFamily;
   text-transform:uppercase;
@@ -29,25 +27,21 @@ body {color:@navbarInverseText}
   }
 }
 
-.pinkBackground(@padding,@url1){
-  background-image: @url1;
+.pinkBackgroundInner(){
+  background-image: url(images/bg_beige.jpg);
   background-position: left top;
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
   background-size: 100% auto;
-  padding:@padding;
-}
 
-.pinkBackground(@padding,@url1, @url2){
-  background-image: @url1, @url2;
+}
+.pinkBackground(@padding: 0 0 2em, @url1:"images/bg_beige.png"){
+  background-image: url(@url1), url("images/bg_beige_bottom.png");
   background-position: left top, left bottom;
   background-repeat: no-repeat, no-repeat;
   background-size: 100% auto;
   padding:@padding;
   .inner{
-    background-image: url("images/bg_beige.jpg");
-    background-position: left top;
-    background-repeat: repeat-y;
-    background-size: 100% auto;
+    .pinkBackgroundInner();
   }
 }
 
@@ -63,6 +57,12 @@ body {color:@navbarInverseText}
   max-width: @maxWidth;
   padding: @padding;
 }
+
+body {
+  color:@navbarInverseText;
+  background-image:url(images/bg_blanc.jpg);
+  //background-repeat:repeat-y;
+  }
 
 /*Titraille*/
 h1,.h1{
@@ -83,13 +83,12 @@ h1,.h1,h2,.h2,h3,h4{
 }
 h3 {margin-bottom: 0;}
 
-/* Geénéral */
+/* Général */
 
 header{text-align:center}
 
 .container {
-  background-image:url(images/bg_blanc.jpg);
-  background-repeat:repeat-y;
+
 }
 
 #content{
@@ -182,6 +181,10 @@ header{text-align:center}
   .Counter(2em,58px,1.6em);
   }
 
+  .bg_wrapper{
+    .pinkBackground(0 0 2em 0);
+  }
+  
 
 /* Home */
 
@@ -196,6 +199,7 @@ header{text-align:center}
       background-repeat:no-repeat,repeat-y;
       background-size: 100%;
       color:#FFFFFF;
+      margin-bottom: 0;
       .counter{
         position: absolute;
         right: 36px;
@@ -219,21 +223,14 @@ header{text-align:center}
       }
     }
   }
+  .bg_wrapper.about{
+    .pinkBackground(2em 0 2em,"images/bg_beige_top.png");
+    .inner{padding: 0em 0 2em 0;}
+  }
   .about{
       .fontFace();
-      background-image:url(images/bg_beige_top.png),url(images/bg_beige_bottom.png);
-      background-position: left top, left bottom;
-      background-repeat:no-repeat, no-repeat;
-      background-size: 100%;
       margin-top:-3em;
-      padding:2em 0 4em 0;
       .button{font-size:2.7em}
-      .inner{
-        background-image:url(images/bg_beige.jpg);
-        background-position: left top;
-        background-repeat:repeat-y;
-        background-size: 100%;
-      }
     .item{
       width:25%;
       display:inline-block;
@@ -287,10 +284,7 @@ header{text-align:center}
 
 .rubrique_upload{
   section{
-    background-image: url("images/bg_beige.jpg");
-    background-position: left top;
-    background-repeat: repeat-y;
-    background-size: 100% auto;
+    .pinkBackgroundInner();
   }
   .inner-content{color:@navbarInverseText}
   .steps, .hashtag,.action{
@@ -320,8 +314,7 @@ header{text-align:center}
 
   }
   .thank_you{
-    background-image:url(images/bg_beige.jpg);
-    background-repeat:repeat-y;
+    .pinkBackgroundInner;
     padding-bottom: 2em;
     img.feet{margin-top:3em}
     p.hashtag{
@@ -357,8 +350,10 @@ header{text-align:center}
       line-height:normal;
       }
   }
+  .teaser.bg_wrapper{
+    padding: 0 0 1em;
+  }
   .bg_wrapper{
-    .pinkBackground(0 0 2em 0,url("images/bg_beige.png"), url("images/bg_beige_bottom.png"));
     .inner-content{padding-top:2em}
   }
   .tweets{
@@ -381,9 +376,7 @@ header{text-align:center}
         }
     }
   }
-  .images{
-    .pinkBackground(2em 0 5em,url("images/bg_beige_top.png"), url("images/bg_beige_bottom.png"));
-  }
+  .images.bg_wrapper{.pinkBackground(2em 0 2em,"images/bg_beige_top.png");}
   .liste_images{
     margin: 0 auto;
     width: 70%;
@@ -412,19 +405,12 @@ header{text-align:center}
     font-size: 2.62em;
     margin: 1em 0;
     }
+   .change.bg_wrapper{
+     .pinkBackground(2em 0 2em,"images/bg_beige_top.png");
+   }
+   
   .change{
-    background-image:url(images/bg_beige_top.png),url(images/bg_beige_bottom.png);
-    background-position: left top, left bottom;
-    background-repeat:no-repeat, no-repeat;
-    background-size: 100%;
-    margin-top:5em;
     padding:3em 0 2em 0;
-    .inner{
-      background-image:url(images/bg_beige.jpg);
-      background-position: left top;
-      background-repeat:repeat-y;
-      background-size: 100%;
-    }
   }
   .lifestyle {
     .inner-content{width:61%}

@@ -1,14 +1,20 @@
 <BOUCLE_content(RUBRIQUES){id_rubrique}{tout}>
 <section>
-  <header class="cartouche inner-content">
-    <h1>#NOM_SITE_SPIP</h1>
-  </header>
-  <div class="inner-content">
-    <div class="wrapper">
-      #LOGO_RUBRIQUE_NORMAL
-      <div class="#EDIT{descriptif} descriptif">#DESCRIPTIF</div>
+  <div class="bg_wrapper">
+    <div class="inner">
+      <div class="inner-content">
+        <header class="cartouche">
+          <h1>#NOM_SITE_SPIP</h1>
+        </header>
+        <div class="wrapper">
+          #LOGO_RUBRIQUE_NORMAL
+          <div class="#EDIT{descriptif} descriptif">#DESCRIPTIF</div>
+        </div>        
+      </div>
     </div>
-    
+  </div>
+
+  <div class="inner-content">    
     <h2 class="h1">We walk for the planet</h1>
     <div class="wrapper">
     <BOUCLE_mots(MOTS){id_rubrique}{par num titre}>
