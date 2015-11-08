@@ -2,10 +2,11 @@
 <section>
   <div class="bg_wrapper">
     <div class="inner">
+      <header class="cartouche">
+        <h1>#NOM_SITE_SPIP</h1>
+      </header>      
       <div class="inner-content">
-        <header class="cartouche">
-          <h1>#NOM_SITE_SPIP</h1>
-        </header>
+
         <div class="wrapper">
           #LOGO_RUBRIQUE_NORMAL
           <div class="#EDIT{descriptif} descriptif">#DESCRIPTIF</div>
@@ -14,8 +15,8 @@
     </div>
   </div>
 
+  <h2 class="h1">We walk for the planet</h1>
   <div class="inner-content">    
-    <h2 class="h1">We walk for the planet</h1>
     <div class="wrapper">
     <BOUCLE_mots(MOTS){id_rubrique}{par num titre}>
       #LOGO_MOT
@@ -28,8 +29,8 @@
   </div>    
   <div class="change bg_wrapper">
     <div class="inner">
+      <h2 class="h1">Change for the Planet – Care for the People</h1>
       <div class="inner-content">
-        <h2 class="h1">Change for the Planet – Care for the People</h1>
         <div class="wrapper">
           #LOGO_RUBRIQUE_SURVOL        
           [<div class="#EDIT{texte} texte">
@@ -46,12 +47,12 @@
     <h2 class="h1">Lifestyle Challenges</h1>
     <div class="wrapper inner-content">
       <BOUCLE_docs(DOCUMENTS){id_rubrique}{extension=png}>
-        <img class="left" src="#URL_DOCUMENT" alt="lifestyle"/>
+        <img src="#URL_DOCUMENT" alt="lifestyle"/>
       </BOUCLE_docs>
-    </div>
-    <br class="clear" />
-    <div class="button">
-      <a href="http://www.cidse.org/articles/rethinking-development/lifestyle-challenges-campaign-change-for-the-planet-care-for-the-people.html">Learn More</a>
+      <br class="clear" />
+      <div class="button">
+        <a href="http://www.cidse.org/articles/rethinking-development/lifestyle-challenges-campaign-change-for-the-planet-care-for-the-people.html">Learn More</a>
+      </div>
     </div>
   </div>
 </section>

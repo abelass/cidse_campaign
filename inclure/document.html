@@ -55,7 +55,7 @@
        </div>
        <div class="step">
          <img src="#CHEMIN{images/upload_step3.png}" alt="Upload Step 3" />
-         <div>STEP 3 <br />UPOAD</div>
+         <div>STEP 3 <br />UPLOAD</div>
        </div>
        <div class="step">
          <img src="#CHEMIN{images/upload_step4.png}" alt="Upload Step 4" />
@@ -69,10 +69,7 @@
         #MODELE{emb,id_document=#ID_DOCUMENT,largeur=#ENV{largeur,320},autoplay=oui}
         </BOUCLE_documents_joints>
     </div>
-    </B_documents_joints>
-    <div class="button upload">#SET{titre,#INFO_TITRE{rubrique,5}}
-      <span><:fourstepsforplanet:upload_video:></span>
-    </div>
+    </B_documents_joints>#SET{titre,#INFO_TITRE{rubrique,5}}
     #SET{definitions,#VAL{''}|fsp_definitions}
     <div>
         Please upload videos in [(#GET{definitions}|table_valeur{video_extensions}|implode{', '})] format not bigger than [(#GET{definitions}|table_valeur{video_upload_max_poids}|div{1000000})]M.

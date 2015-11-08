@@ -46,6 +46,7 @@ a:focus,a:hover,a.active{
 /*Titraille*/
 h1,.h1{
   padding: 0 26px;
+  margin-top:0.2em;
   background-image:url(images/h1_vert_left.png),url(images/h1_vert_right.png);
   background-repeat:no-repeat;
   background-position:left,right;
@@ -149,7 +150,7 @@ header{text-align:center}
 
 /* buttons */
 
-.button{
+.button, .boutons{
   font-size:3em;
   .fontFace;
   background-image:url(images/button_green.png);
@@ -164,7 +165,7 @@ header{text-align:center}
     padding: 0;
   }
 }
-.button:hover{
+.button:hover, .boutons:hover{
   background-image:url(images/button_green_hover.png);
 }
 
@@ -218,6 +219,7 @@ header{text-align:center}
         color:#FFFFFF;
         font-weight:normal;
         background-image:url(images/h1_blanc_left.png),url(images/h1_blanc_right.png);
+        margin-top:0;
       }
       .button {
         background-image:url(images/button_white.png);
@@ -291,6 +293,19 @@ header{text-align:center}
   .steps, .hashtag,.action{
     .fontFace();
   }
+  .formulaire_spip .boutons {
+      padding: 0.9em 2em;
+      margin-bottom:2em;
+  }
+  input.submit{
+    .fontFace();
+    color:@linkColor;
+    border:none;
+    background:none;
+    font-size:1em;
+    line-height:normal;
+    padding:0;
+    }
   .steps{margin:2em auto 0 auto;}
   .step{
     width:25%;
@@ -390,6 +405,8 @@ header{text-align:center}
 }
 
 .rubrique_about{
+  #content, .cartouche{text-align:left;}
+  h1,.h1{margin-left:21%}
   .inner-content{
     clear:both;
     width:74%;
@@ -401,6 +418,7 @@ header{text-align:center}
       img {float:left}
     }
   }
+  .spip_logos{max-width:86px}
   .button {
     clear:both;
     font-size: 2.62em;
