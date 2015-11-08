@@ -29,10 +29,10 @@ function fourstepsforplanet_formulaire_verifier($flux) {
     $definitions = $definitions($type);
     $extensions = $definitions['video_extensions'];
     $size = $definitions['video_upload_max_poids'];
-    
+
     foreach($files as $file){
       list($name,$extension) = explode('.',$file['name'][0]);
-      if (!in_array($extension,$extensions)){
+      if (!in_array(strtolower($extension),$extensions)){
         $flux['data']['message_erreur'] = _T('fourstepsforplanet:upload_erreur_extension',
         array('extensions' => implode(', ',$extensions))
         );
@@ -43,8 +43,8 @@ function fourstepsforplanet_formulaire_verifier($flux) {
       }
       spip_log($post,'teste');
       }
-    
-  
+
+
   }
   return $flux;
 }
@@ -74,10 +74,10 @@ function fourstepsforplanet_formulaire_traiter($flux) {
  * @return array       Données du pipeline
  */
 function fourstepsforplanet_insert_head($flux){
-  
+
   $flux .= "<script src='" . find_in_path('scripts/masonry.pkgd.min.js') ."' type='text/javascript'></script>\n";
   $flux .= "<script src='" . find_in_path('scripts/imagesloaded.pkgd.min.js') ."' type='text/javascript'></script>\n";
   $flux .= "<script src='" . find_in_path('scripts/masonryInit.js') ."' type='text/javascript'></script>\n";
-  
-  return $flux;  
+
+  return $flux;
   }
