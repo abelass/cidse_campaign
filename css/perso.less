@@ -1,5 +1,6 @@
 @import "css/variables.less";
-
+@import "css/boot-theme.less";
+/* Mixins*/
 .fontFace() {
   font-family: @headingsFontFamily;
   text-transform:uppercase;
@@ -9,7 +10,6 @@
 .fontFace(@font-size) {
   font-size : @font-size;
 }
-
 
 .pinkBackgroundInner(){
   background-image: url(images/bg_beige.jpg);
@@ -29,23 +29,19 @@
   }
 }
 
-.Counter(@size : 2em, @maxWidth :58px, @padding : 1.6em){
-  .fontFace();
-  font-size:@size;
-  background-image:url(images/cercle_blanc.png);
-  background-repeat:no-repeat;
-  background-position:center;
-  background-size: 100%;
-  display: inline-block;
-  line-height: 1em;
-  max-width: @maxWidth;
-  padding: @padding;
-}
-
+/* Stylesheet */
 body {
-  color:@navbarInverseText;
+  color:@linkColor;
   background-image:url(images/bg_blanc.jpg);
+  background-position: left top, left bottom;
+  background-repeat: repeat-y;
+  background-size: 100% auto;
   }
+  
+a:focus,a:hover,a.active{
+  background:none;
+  color:@linkColor;
+}
 
 /*Titraille*/
 h1,.h1{
@@ -168,12 +164,24 @@ header{text-align:center}
     padding: 0;
   }
 }
+.button:hover{
+  background-image:url(images/button_green_hover.png);
+}
 
 /* Counter*/
 
 .counter{
-  .Counter(2em,58px,1.6em);
-  }
+  .fontFace();
+  font-size:2em;
+  background-image:url(images/cercle_blanc.png);
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size: 100%;
+  display: inline-block;
+  line-height: 1em;
+  max-width: 58px;
+  padding: 1.5em 1.7em 1.3em 1.1em;
+}
 
   .bg_wrapper{
     .pinkBackground(0 0 2em 0);
@@ -212,8 +220,9 @@ header{text-align:center}
         background-image:url(images/h1_blanc_left.png),url(images/h1_blanc_right.png);
       }
       .button {
-        background-image:url(images/button_white);
-         a{ color:#FFFFFF}
+        background-image:url(images/button_white.png);
+        padding: 0 0.89em 0.89em;
+        a{ color:#FFFFFF}
       }
     }
   }
@@ -224,7 +233,10 @@ header{text-align:center}
   .about{
       .fontFace();
       margin-top:-3em;
-      .button{font-size:2.7em}
+      .button{
+        font-size:2.7em;
+        a {line-height:2em;}
+        }
     .item{
       width:25%;
       display:inline-block;
@@ -247,15 +259,10 @@ header{text-align:center}
       right:1%;
       top:1.3em;
       font-size:2em;
-      a {
-        padding-top: 0.6em;
-        line-height: 1.4em;
-        padding-bottom: 0.7em;
-      }
     }
     .counter {
       left: 9%;
-      color:@navbarInverseText;
+      color:@linkColor;
       background-image:url(images/cercle_vert.png);
       top:0;
       }
@@ -280,10 +287,11 @@ header{text-align:center}
   section{
     .pinkBackgroundInner();
   }
-  .inner-content{color:@navbarInverseText}
+  .inner-content{color:@linkColor}
   .steps, .hashtag,.action{
     .fontFace();
   }
+  .steps{margin:2em auto 0 auto;}
   .step{
     width:25%;
     float:left;
@@ -302,7 +310,7 @@ header{text-align:center}
   .teaser {
     margin : 2em 0;
     .media {
-    border: 4px solid @navbarInverseText;
+    border: 4px solid @linkColor;
   }
 
   }
@@ -360,11 +368,11 @@ header{text-align:center}
       margin: 1.5em 0.8em;
       background: url("images/action.png") no-repeat right center;
       padding:0;
-      img{border: 2px solid @navbarInverseText;}
+      img{border: 2px solid @linkColor;}
       p{
         min-height: 40px;
         padding: 0.5em;
-        border:@navbarInverseText 2px solid;
+        border:@linkColor 2px solid;
         margin: 0 40px 0 0;
         }
     }
@@ -396,8 +404,11 @@ header{text-align:center}
   .button {
     clear:both;
     font-size: 2.62em;
-    margin: 1em 0;
+    margin: 0;
+    padding:.2em 0.89em;
+      a {line-height: 2.1em;}
     }
+
    .change.bg_wrapper{
      .pinkBackground(2em 0 2em,"images/bg_beige_top.png");
    }
@@ -441,10 +452,10 @@ header{text-align:center}
   h1 {margin-bottom: 0;}
   p {margin-bottom: 0;}
   header {padding-top:2em;}
+  .inner-content{width:80%;}
   .counter{
     font-size: 1.4em;
     max-width: 46px;
-    padding: 1.2em;
     }
   .navbar-inner {width:@gridRowWidth768}
   .home {
@@ -457,13 +468,21 @@ header{text-align:center}
      .items{width:100%;}
      .item p{padding: .5em 0.5em;}
     }
-    .walk .button {
-      font-size: 1.8em;
-      a, span {
-        display: block;
-        line-height: 1.9em;
-        padding: 0 .8em 0.6em;
+    .walk {
+      h2.h1 {
+        margin: 0.2em 0 1em 0;
+        }
+      .button {
+        font-size: 1.8em;
+        a, span {
+          display: block;
+        }
       }
+      .counter{
+        left:10%;
+        top:1em;
+      }
+      
     }
   }
   .rubrique_about {
@@ -472,10 +491,19 @@ header{text-align:center}
       .wrapper > div{
          margin-top: 1em;
          margin-left: 20%;
-         }
+      }
     }
-
   }
+  
+ .rubrique_upload{
+  
+   .step {
+
+     div {
+       margin: 0.2em 0;
+     }
+   }
+ }
 }
 
 @media (max-width: 767px){
@@ -489,7 +517,7 @@ header{text-align:center}
     right: 0;
   }
   .navbar-inverse .btn-navbar{
-    background-color:@navbarInverseText;
+    background-color:@linkColor;
   }
   h1, .h1 {margin-bottom:0}
   .home #content .cartouche h1, h1, .h1 {
@@ -504,34 +532,21 @@ header{text-align:center}
     }
 
   .bg_wrapper{padding: 0 !important;}
+
+  .home .about .button,.home .walk .button,.home #content .cartouche .button {font-size:2em;}
+
   .home {
     header.cartouche {
-    padding: 31% 0 7em!important;
-    margin-bottom: 0.1em;
-    .spip_logos{
-      margin: 15px auto 0 auto;
-      display:block;
-      }
+      padding: 31% 0 7em!important;
+      margin-bottom: 0.1em;
+      .spip_logos{
+        margin: 15px auto 0 auto;
+        display:block;
+        }
     }
     .bg_wrapper.about .inner {
-    padding: 1em 0 2em;
-}
-  }
-
-
-
-  .button {
-    background-image:none !important;
-    border:2px solid @navbarInverseText;
-    font-size:2em !important;
-  }
-  .cartouche .button.about_this{border:2px solid #ffffff;}
-  .home .about .button,.home .walk .button,.home #content .cartouche .button {
-    background-image:none;
-    font-size:2em;
-}
-
-  .home {
+      padding: 1em 0 2em;
+     }
     .walk {
     h2.h1 {margin: 0.3em 0;}
     .button {
@@ -540,8 +555,6 @@ header{text-align:center}
       margin-bottom:1em;
   a, span {
         display: block;
-        line-height: 1.5em;
-       padding: 0 .8em 0.2em!important;
       }
     }
     .counter{display:none}
@@ -554,12 +567,12 @@ header{text-align:center}
        width:100%;
        font-size:1em;
      }
+    .item {
+      margin-right: 0;
+      width: 120px;
+     }
      p{
        padding: 0;
-     }
-    .item {
-      width: 23%;
-      margin-right: 0;
      }
     }
   #content .cartouche .spip_logos {
@@ -572,7 +585,6 @@ header{text-align:center}
      position: relative;
     font-size: 1.2em;
     max-width: 27px;
-    padding: 1.5em;
     right:0;
     top:0;
   }
@@ -605,4 +617,14 @@ header{text-align:center}
     }
   .images{padding: 1em 0 1em;}
   }
+  .rubrique_upload .step {
+    display: inline-block;
+    width: 90px;
+    margin: 0.3em;
+    float:none;
+    div {
+      margin: 0.2em 0;
+    }
+  }
+
 }
