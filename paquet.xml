@@ -17,6 +17,7 @@
   
   <utilise nom="medias" compatibilite="[2.7.66;]" />
   <utilise nom="bootstrap" compatibilite="[2.1.7;]" />
+  <utilise nom="spipr_dist" compatibilite="[0.4.12;]" />  
   
   <pipeline nom="formulaire_verifier" inclure="fourstepsforplanet_pipelines.php" />
   <pipeline nom="formulaire_traiter" inclure="fourstepsforplanet_pipelines.php" />
