@@ -10,22 +10,6 @@
   font-size : @font-size;
 }
 
-.Button(green,@size){
-  background-image:url(images/button_green_beige_left.png), url(images/button_green_node.png), url(images/button_green_beige_right.png), url(images/button_green_center.png);
-}
-
-.Button(@_,@size){
-  .fontFace();
-  font-size:@size;
-  background-repeat:no-repeat, no-repeat, no-repeat, repeat-x;
-  background-position:left top, center bottom, right top,center top;
-  display:inline-block;
-  a,span{
-    display: block;
-    line-height: 1.5em;
-    padding: 0 0.8em 0.2em;
-  }
-}
 
 .pinkBackgroundInner(){
   background-image: url(images/bg_beige.jpg);
@@ -91,7 +75,7 @@ header{text-align:center}
   text-align: center;
   margin-top: 30px;
   }
-  
+
 .cartouche {
   text-align:center;
   .wrapper{position:relative;}
@@ -170,7 +154,19 @@ header{text-align:center}
 /* buttons */
 
 .button{
-  .Button(green,3em);
+  font-size:3em;
+  .fontFace;
+  background-image:url(images/button_green.png);
+  background-repeat:no-repeat;
+  background-position:left top;
+  background-size: 100%;
+  display:inline-block;
+  padding: 0.89em;
+  a,span{
+    display: block;
+    line-height: 1.7em;
+    padding: 0;
+  }
 }
 
 /* Counter*/
@@ -182,7 +178,7 @@ header{text-align:center}
   .bg_wrapper{
     .pinkBackground(0 0 2em 0);
   }
-  
+
 
 /* Home */
 
@@ -216,7 +212,7 @@ header{text-align:center}
         background-image:url(images/h1_blanc_left.png),url(images/h1_blanc_right.png);
       }
       .button {
-        background-image:url(images/button_white_left.png), url(images/button_white_node.png), url(images/button_white_right.png), url(images/button_white_center.png);
+        background-image:url(images/button_white);
          a{ color:#FFFFFF}
       }
     }
@@ -250,7 +246,6 @@ header{text-align:center}
     .button{
       right:1%;
       top:1.3em;
-      background-image:url(images/button_green_white_left_big.png), url(images/button_green_white_node_big.png), url(images/button_green_white_right_big.png), url(images/button_green_center_big.png);
       font-size:2em;
       a {
         padding-top: 0.6em;
@@ -296,7 +291,6 @@ header{text-align:center}
   }
 
   .button{
-    background-image:url(images/button_green_white_left_big.png), url(images/button_green_white_node_big.png), url(images/button_green_white_right_big.png), url(images/button_green_center_big.png);
     font-size:3.18em;
     clear:both;
     margin-top: 1em;
@@ -407,7 +401,7 @@ header{text-align:center}
    .change.bg_wrapper{
      .pinkBackground(2em 0 2em,"images/bg_beige_top.png");
    }
-   
+
   .change{
     padding:3em 0 2em 0;
   }
@@ -464,7 +458,6 @@ header{text-align:center}
      .item p{padding: .5em 0.5em;}
     }
     .walk .button {
-      background-image: url(images/button_green_white_left.png),url(images/button_green_node.png),url(images/button_green_white_right.png),url(images/button_green_center.png);
       font-size: 1.8em;
       a, span {
         display: block;
@@ -509,7 +502,7 @@ header{text-align:center}
     margin-top:3em;
     padding-top: 1em;
     }
-  
+
   .bg_wrapper{padding: 0 !important;}
   .home {
     header.cartouche {
@@ -585,7 +578,7 @@ header{text-align:center}
   }
 
   .inner-content {width:80%;}
-  
+
   .rubrique_about {
     .inner-content {
       .wrapper {
