@@ -1,0 +1,68 @@
+//
+// Variables
+// --------------------------------------------------
+
+
+// Accent colors
+// -------------------------
+
+@green:                 #5D8164;
+
+
+// Scaffolding
+// -------------------------
+@bodyBackground:        @white;
+@textColor:             @grayDark;
+
+
+// Links
+// -------------------------
+@linkColor:             @green;
+@linkColorHover:        darken(@linkColor, 15%);
+
+
+// Typography
+// -------------------------
+@font-face {
+  font-family:"Cardenio Modern";
+  src:url("font_face/Cardenio_Modern.eot?") format("eot"),
+    url("font_face/Cardenio_Modern.woff") format("woff"),
+    url("font_face/Cardenio_Modern.ttf") format("truetype"),
+    url("font_face/Cardenio_Modern.svg#CardenioModern") format("svg");
+  font-weight:normal;font-style:normal;
+  }
+
+
+
+@fontCardenioModern:    "Cardenio Modern";
+
+
+@baseFontSize:          14px;
+@baseFontFamily:        @serifFontFamily;
+@baseLineHeight:        20px;
+@altFontFamily:         @sansFontFamily;
+
+@headingsFontFamily:    @fontCardenioModern; 
+@headingsFontWeight:    normal;    // instead of browser default, bold
+@headingsColor:         inherit; // empty to use BS default, @textColor
+
+
+// Inverted navbar
+@navbarInverseBackground:                transparent;
+@navbarInverseBackgroundHighlight:       transparent;
+@navbarInverseBorder:                    none;
+
+@navbarInverseText:                      @linkColor;
+@navbarInverseLinkColor:                 @linkColor;
+@navbarInverseLinkColorHover:            lighten(@linkColor, 25%);
+@navbarInverseLinkColorActive:           @navbarInverseLinkColorHover;
+@navbarInverseLinkBackgroundHover:       transparent;
+@navbarInverseLinkBackgroundActive:      @navbarInverseBackground;
+
+@navbarInverseSearchBackground:          lighten(@navbarInverseBackground, 25%);
+@navbarInverseSearchBackgroundFocus:     @white;
+@navbarInverseSearchBorder:              @navbarInverseBackground;
+@navbarInverseSearchPlaceholderColor:    #ccc;
+
+@navbarInverseBrandColor:                @navbarInverseLinkColor;
+
