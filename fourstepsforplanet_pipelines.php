@@ -37,7 +37,6 @@ function fourstepsforplanet_formulaire_verifier($flux) {
       if ($file['size'][0] > $size) {
         $flux['data']['message_erreur'] = _T('fourstepsforplanet:upload_erreur_size', array('size' => $size / 1000000));
       }
-      spip_log($post, 'teste');
     }
   }
   return $flux;
