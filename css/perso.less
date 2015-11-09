@@ -92,6 +92,8 @@ header{text-align:center}
 
 .formulaire_spip .boutons {border:none}
 
+.pagination{clear:both;}
+
 /*Navigation*/
 
 .navbar {
@@ -268,12 +270,24 @@ header{text-align:center}
       background-image:url(images/cercle_vert.png);
       top:0;
       }
-    /*Masonry*/
-    #grid{margin: 0 2em;}
+    /*Videos*/
+    #grid{
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      text-align:center;
+      }
     .grid-item{
-      width:33.3333333333333333%;
+      width:33.3%;
       float:left;
-      .media{margin:0 0.5em 1em 0.5em;}
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+       margin:0.5em auto;
+      .media{margin:0 0.5em;}
     }
   }
 }

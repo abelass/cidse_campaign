@@ -5,10 +5,10 @@
   <div class="circle counter">
     <:fourstepsforplanet:texte_compteur{compteur=#GET{compteur}}:>
   </div>
-  <div id="grid" class="transitions-enabled infinite-scroll clearfix">
+  <div id="grid">
     <BOUCLE_documents_joints(DOCUMENTS) {id_rubrique} {extension IN #VAL|fsp_definitions} {tout}{!par date} {pagination #ENV{pag,6}}>
     [<div class="grid-item" id="document_#ID_DOCUMENT">
-	  (#MODELE{emb,id_document=#ID_DOCUMENT,muted=#ENV{muted,oui},largeur=#ENV{largeur,100%},moviesize=#ENV{moviesize,adapt},autoplay=#ENV{autoplay,non},preload=#ENV{preload,meta},controls=#ENV{controls,true}})
+	  (#MODELE{emb,id_document=#ID_DOCUMENT,muted=#ENV{muted,oui},largeur=#ENV{largeur,100%},moviesize=#ENV{moviesize,false},autoplay=#ENV{autoplay,non},preload=#ENV{preload,meta},controls=#ENV{controls,true}})
     </div>]
     </BOUCLE_documents_joints>
   </div>
