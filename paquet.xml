@@ -22,6 +22,5 @@
   
   <pipeline nom="formulaire_verifier" inclure="fourstepsforplanet_pipelines.php" />
   <pipeline nom="formulaire_traiter" inclure="fourstepsforplanet_pipelines.php" />
-  <pipeline nom="insert_head" inclure="fourstepsforplanet_pipelines.php" />
-
+  
 </paquet>

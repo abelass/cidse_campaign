@@ -58,19 +58,3 @@ function fourstepsforplanet_formulaire_traiter($flux) {
   }
   return $flux;
 }
-
-/**
- * Permet d’ajouter des contenus dans la partie <head> d’une page HTML.
- *
- * @pipeline formulaire_traiter
- * @param  array $flux Données du pipeline
- * @return array       Données du pipeline
- */
-function fourstepsforplanet_insert_head($flux) {
-
-  $flux .= "<script src='" . find_in_path('scripts/masonry.pkgd.min.js') . "' type='text/javascript'></script>\n";
-  $flux .= "<script src='" . find_in_path('scripts/imagesloaded.pkgd.min.js') . "' type='text/javascript'></script>\n";
-  $flux .= "<script src='" . find_in_path('scripts/masonryInit.js') . "' type='text/javascript'></script>\n";
-
-  return $flux;
-}
