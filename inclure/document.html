@@ -15,7 +15,7 @@
         <a href="https://www.facebook.com/sharer/sharer.php?u=[(#SELF|url_absolue|urlencode)]"><img src="#CHEMIN{images/facebook.png}" alt="email" /></a>
       </div>
       <div class="twitter">
-        <a href="http://twitter.com/intent/tweet?text=[(#VAL{<:fourstepsforplanet:share_video_description_twitter{url=#URL_SITE_SPIP}:>}|urlencode)]&url=[(#SELF|url_absolue|urlencode)]"><img src="#CHEMIN{images/twitter.png}" alt="email" /></a>
+        <a href="http://twitter.com/intent/tweet?text=[(#VAL{<:fourstepsforplanet:share_video_description_twitter{url=http://bit.ly/1Q6CgpF}:>}|urlencode)]&url=http://bit.ly/1Q6CgpF"><img src="#CHEMIN{images/twitter.png}" alt="email" /></a>
       </div>
       <div class="mail">
         <a title="<:recommander:recommander:> "class="mediabox" href="[(#URL_PAGE{recommander}|parametre_url{url,#ENV{url}}|parametre_url{titre,#ENV{titre}}|parametre_url{texte,#ENV{introduction}})]">
@@ -73,6 +73,9 @@
     #SET{definitions,#VAL{''}|fsp_definitions}
     <div>
         Please upload videos in [(#GET{definitions}|table_valeur{video_extensions}|implode{', '})] format not bigger than [(#GET{definitions}|table_valeur{video_upload_max_poids}|div{1000000})]M.
+    </div>
+    <div>
+      If you have problems with uploading your videos, or wish to contact us for more information, write us to the following address: <a href="mailto:fourstepsforplanet@gmail.com">fourstepsforplanet@gmail.com</a>
     </div>
     <div class="none-js; display:none;">
       #FORMULAIRE_JOINDRE_DOCUMENT{new,#ID_RUBRIQUE,rubrique,document}
