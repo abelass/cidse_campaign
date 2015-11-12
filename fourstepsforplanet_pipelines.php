@@ -57,7 +57,7 @@ function fourstepsforplanet_formulaire_traiter($flux) {
     $id_document = $flux['data']['ids'][0];
 
     //Convert the video with zencoder
-    //zencoder_new_job($id_document);
+    zencoder_new_job($id_document);
 
     $flux['data']['redirect'] = '/' . generer_url_public("rubrique", "id_rubrique=5&id_document=$id_document") . $flux['data']['redirect'];
   }
