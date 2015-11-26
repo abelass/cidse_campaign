@@ -1,40 +1,44 @@
 <BOUCLE_content(RUBRIQUES){id_rubrique}{tout}>
-<section>
-    <header class="cartouche">
-      <INCLURE{fond=inclure/counter,id_rubrique,env}/>
-      <h1 class="#EDIT{titre}">#NOM_SITE_SPIP</h1>
-        [<div class="#EDIT{texte} texte inner-content">(#TEXTE)</div>]
-        <div class="wrapper">
-          <div class="button about_this">
-            <a href="#walk"><:fourstepsforplanet:walk_us:></a>
-          </div>
-          #LOGO_SITE_SPIP
-        </div>
-    </header>
-    <div class="bg_wrapper about">
-      <div class="inner">
-         <div class="items">
-        <BOUCLE_mots(MOTS){id_groupe=1}>
-          <div class="item">
-            #LOGO_MOTS
-            #DESCRIPTIF
-          </div>
-        </BOUCLE_mots>
-        </div>
-          <div class="button about_this">
-            <a href="#URL_RUBRIQUE{3}">#INFO_TITRE{rubrique,3}</a>
-          </div>
-      </div>
-    </div>
-    <div class="walk clearfix" id="walk">
-      <header>
-        <h2 class="h1"><:fourstepsforplanet:walk_us:></h2>
-      </header>
-      <div class="button upload">#SET{titre,#INFO_TITRE{rubrique,5}}
-        <a href="#URL_RUBRIQUE{5}" title="#GET{titre}">#GET{titre}</a>
-      </div>
-     <INCLURE{fond=inclure/documents,env}/>
-     
-    </div>
-</section>
+	<section>
+		<header class="cartouche">
+			<INCLURE{fond=inclure/counter,id_rubrique,env}/>
+			<h1 class="#EDIT{titre}">#NOM_SITE_SPIP</h1>
+			[
+			<div class="#EDIT{texte} texte inner-content">
+				(#TEXTE)
+			</div>
+			]
+			<div class="wrapper">
+				<div class="button about_this">
+					<a href="#walk"><:fourstepsforplanet:walk_us:></a>
+				</div>
+				#LOGO_SITE_SPIP
+			</div>
+		</header>
+		<div class="bg_wrapper about">
+			<div class="inner">
+				<div class="items">
+					<BOUCLE_mots(MOTS){id_groupe=1}>
+						<div class="item">
+							#LOGO_MOTS
+							#DESCRIPTIF
+						</div>
+						</BOUCLE_mots>
+				</div>
+				<div class="button about_this">
+					<a href="#URL_RUBRIQUE{3}">#INFO_TITRE{rubrique,3}</a>
+				</div>
+			</div>
+		</div>
+		<div class="walk clearfix" id="walk">
+			<header>
+				<h2 class="h1"><:fourstepsforplanet:walk_us:></h2>
+			</header>
+			<div class="button upload">
+				#SET{titre,#INFO_TITRE{rubrique,5}} <a href="#URL_RUBRIQUE{5}" title="#GET{titre}">#GET{titre}</a>
+			</div>
+			<INCLURE{fond=inclure/documents,env}/>
+
+		</div>
+	</section>
 </BOUCLE_content>
