@@ -32,7 +32,7 @@ function fourstepsforplanet_formulaire_verifier($flux) {
     foreach ($files as $file) {
       list($name, $extension) = explode('.', $file['name'][0]);
       if (!in_array(strtolower($extension), $extensions)) {
-        $flux['data']['message_erreur'] = _T('fourstepsforplanet:upload_erreur_extension', array('extensions' => implode(', ', $extensions)));
+        //$flux['data']['message_erreur'] = _T('fourstepsforplanet:upload_erreur_extension', array('extensions' => implode(', ', $extensions)));
       }
       if ($file['size'][0] > $size) {
         $flux['data']['message_erreur'] = _T('fourstepsforplanet:upload_erreur_size', array('size' => $size / 1000000));
